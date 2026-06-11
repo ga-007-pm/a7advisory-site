@@ -26,16 +26,25 @@ export function Button({
         href={href}
         target={target}
         rel={rel}
-        style={{ background: "var(--gradient)" }}
-        className={cn("p-px rounded-[6px] inline-flex group", className)}
+        style={{ background: "var(--gradient)", padding: 1, borderRadius: 6, display: "inline-flex" }}
+        className={cn(
+          "group/cta transition-all duration-200 hover:brightness-110 hover:shadow-[0_0_0_1px_rgba(168,107,255,0.35),0_8px_24px_-6px_rgba(140,82,255,0.55),0_0_48px_-8px_rgba(224,132,72,0.35)]",
+          className
+        )}
       >
         <span
-          className="group-hover:bg-white/[0.07] rounded-[6px] px-4 py-2 text-sm font-medium text-light whitespace-nowrap transition-all duration-200 inline-flex items-center"
-          style={{ backgroundColor: innerBg ?? "#08080E" }}
+          className="transition-colors duration-200 group-hover/cta:text-white"
+          style={{
+            background: innerBg ?? "#08080E",
+            borderRadius: 5,
+            padding: "8px 16px",
+            fontSize: 14,
+            fontWeight: 500,
+            color: "#F0EDFF",
+            whiteSpace: "nowrap",
+          }}
         >
-          <span className="group-hover:-translate-y-px transition-transform duration-200 inline-block">
-            {children}
-          </span>
+          {children}
         </span>
       </a>
     )

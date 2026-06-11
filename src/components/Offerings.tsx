@@ -26,18 +26,27 @@ export function Offerings() {
   return (
     <section
       id="offerings"
-      data-nav-theme="dark"
+      aria-labelledby="offerings-heading"
       style={{ backgroundColor: "#1A1A22" }}
     >
       <div className="section-inner section-py">
 
-        {/* Section label */}
-        <p
-          className="text-[11px] font-semibold uppercase tracking-[0.12em] mb-[52px]"
-          style={{ color: "#6E7294" }}
-        >
-          {t("label")}
-        </p>
+        {/* Section header */}
+        <div className="mb-14 text-center">
+          <p
+            className="text-[11px] font-semibold uppercase tracking-[0.12em]"
+            style={{ color: "#6E7294" }}
+          >
+            {t("label")}
+          </p>
+          <h2
+            id="offerings-heading"
+            className="mt-4 mx-auto max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl"
+            style={{ color: "#F0EDFF" }}
+          >
+            {t("heading")}
+          </h2>
+        </div>
 
         {/* Split layout: 280px nav | 1fr content */}
         <div

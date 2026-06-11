@@ -1,42 +1,19 @@
-"use client"
-
-import { useState } from "react"
 import { WHATSAPP_URL } from "@/lib/constants"
 
 interface WhatsAppButtonProps {
   label: string
-  size?: "icon" | "pill"
 }
 
-export function WhatsAppButton({ label, size = "icon" }: WhatsAppButtonProps) {
-  const [hovered, setHovered] = useState(false)
-
+export function WhatsAppButton({ label }: WhatsAppButtonProps) {
   return (
     <a
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      style={{ background: hovered ? "#25D366" : "var(--gradient)" }}
-      className="p-px rounded-[6px] inline-flex transition-all duration-200"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      className="grid h-10 w-10 place-items-center rounded-md border border-white/15 text-white/80 transition-colors duration-200 hover:border-white/40 hover:text-[#25D366]"
     >
-      <span
-        className="rounded-[6px] flex items-center justify-center text-light transition-colors duration-200"
-        style={{
-          backgroundColor: hovered ? "#25D366" : "#08080E",
-          width: size === "pill" ? "auto" : "2.25rem",
-          height: "2.25rem",
-          padding: size === "pill" ? "0 0.75rem" : undefined,
-          gap: size === "pill" ? "0.375rem" : undefined,
-        }}
-      >
-        <WhatsAppIcon />
-        {size === "pill" && (
-          <span className="text-sm font-medium">{label}</span>
-        )}
-      </span>
+      <WhatsAppIcon />
     </a>
   )
 }
