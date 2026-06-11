@@ -103,7 +103,7 @@ export function Offerings() {
                       className="text-[10px] font-bold tracking-[0.12em] uppercase transition-opacity duration-200"
                       style={{
                         color: accent,
-                        opacity: isActive ? 1 : 0,
+                        opacity: isActive ? 1 : 0.45,
                       }}
                     >
                       {item.tag}
@@ -157,7 +157,7 @@ export function Offerings() {
 
                       {/* Subtitle */}
                       <p
-                        className="text-[15px] font-medium leading-[1.5] mb-5 pb-5"
+                        className="text-[16px] font-medium leading-[1.5] mb-5 pb-5"
                         style={{
                           color: "#F0EDFF",
                           opacity: 0.7,
@@ -169,7 +169,7 @@ export function Offerings() {
 
                       {/* Body */}
                       <p
-                        className="text-[14px] leading-[1.75] mb-7"
+                        className="text-[15px] leading-[1.75] mb-7"
                         style={{ color: "#6E7294" }}
                       >
                         {item.body}
@@ -177,7 +177,7 @@ export function Offerings() {
 
                       {/* Triggers */}
                       <p
-                        className="text-[10px] font-semibold tracking-[0.10em] uppercase mb-3"
+                        className="text-[11px] font-semibold tracking-[0.10em] uppercase mb-3"
                         style={{ color: "#6E7294" }}
                       >
                         {t("trigger_label")}
@@ -186,7 +186,7 @@ export function Offerings() {
                         {item.triggers.map((trigger, j) => (
                           <li
                             key={j}
-                            className="flex items-start gap-2.5 text-[13px] leading-[1.5]"
+                            className="flex items-start gap-2.5 text-[14px] leading-[1.5]"
                             style={{ color: "#F0EDFF", opacity: 0.75 }}
                           >
                             <span
