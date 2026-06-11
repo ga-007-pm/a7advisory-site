@@ -53,7 +53,6 @@ export function Offerings() {
           style={{
             display: "grid",
             gridTemplateColumns: "280px 1fr",
-            minHeight: "420px",
           }}
         >
           {/* ── LEFT NAV ── */}
@@ -209,10 +208,7 @@ export function Offerings() {
             </AnimatePresence>
 
             {/* CTA — outside AnimatePresence, never re-renders on panel switch */}
-            <div
-              className="mt-9 pt-8"
-              style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
-            >
+            <div className="mt-5">
               <Button variant="primary" href={CALENDLY_URL} innerBg="#1A1A22">
                 {t("cta")}
               </Button>
