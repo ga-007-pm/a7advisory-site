@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
+@theme {
+  /* Section backgrounds */
+  --color-dark:     #08080E;
+  --color-dark-alt: #1A1A22;
+  --color-tint:     #F4F3FA;
+
+  /* Brand */
+  --color-purple: #8c52ff;
+  --color-orange: #e08448;
+
+  /* Text */
+  --color-light:    #F0EDFF;
+  --color-dim:      #6E7294;
+  --color-ink:      #0F0F14;
+  --color-muted:    #6B7280;
+  --color-label:    #4B5563;
+
+  /* Borders */
+  --color-border-card: #E5E7EB;
+  --color-border-tint: #E2E0EF;
+
+  /* Pills */
+  --color-pill:     #ECEAF5;
+  --color-pill-rim: #DDDAF0;
+
+  /* Font */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Design tokens not in @theme (accessed via var() only) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --gradient: linear-gradient(90deg, #8c52ff 0%, #a86bff 48%, #e08448 100%);
+  --radius-card: 6px;
+  --radius-cta:  10px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ─── Layout utilities ───────────────────────────────────────────────────── */
+@layer components {
+  /* Shared content wrapper — scales with viewport, caps at 1440px */
+  .section-inner {
+    max-width: clamp(1100px, 90vw, 1440px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;   /* 24px */
+    padding-right: 1.5rem;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @media (min-width: 768px) {
+    .section-inner {
+      padding-left: 3rem;   /* 48px */
+      padding-right: 3rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .section-inner {
+      padding-left: 4rem;   /* 64px */
+      padding-right: 4rem;
+    }
+  }
+
+  /* Standard section vertical padding — offerings, metrics, about, faq, cta */
+  .section-py {
+    padding-top: 4.5rem;    /* 72px */
+    padding-bottom: 4.5rem;
+  }
+
+  /* Compact vertical padding — logos bar */
+  .section-py-sm {
+    padding-top: 1.5rem;    /* 24px */
+    padding-bottom: 1.5rem;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #08080E;
+  color: #F0EDFF;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
 }

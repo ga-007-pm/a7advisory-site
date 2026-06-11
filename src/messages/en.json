@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "cta": "Book a call",
+    "whatsapp_label": "WhatsApp"
+  },
+  "hero": {
+    "eyebrow": "Fractional CPO · Strategic Advisor",
+    "headline": "Turn product into leverage.",
+    "sub_prefix": "Driving",
+    "sub_suffix": "growth through",
+    "slot1": ["ARR", "NRR", "ACV"],
+    "slot2": ["sharper bets", "faster execution", "AI-native products & workflows"],
+    "btn_primary": "Book a call",
+    "btn_secondary": "See how it works"
+  },
+  "logos": {
+    "label": "Product chops sharpened across",
+    "companies": ["Monday.com", "Meta", "PlayStation Network", "BQE Software", "MobileCause", "Cognota"]
+  },
+  "offerings": {
+    "label": "Product leadership, at every depth",
+    "trigger_label": "Right for you if",
+    "cta": "Book a call",
+    "items": [
+      {
+        "num": "01",
+        "tag": "Lead",
+        "title": "Fractional CPO",
+        "subtitle": "Full product leadership, scoped to your inflection point.",
+        "body": "Own strategy, align go-to-market, and drive execution — without the cost or ramp of a full-time hire. Embedded in your team, operating on your cadence.",
+        "triggers": [
+          "Founder-led product — ready to hand it to a seasoned operator",
+          "Scale and complexity have outgrown current product leadership",
+          "CPO-caliber experience — without the full-time hire"
+        ]
+      },
+      {
+        "num": "02",
+        "tag": "Guide",
+        "title": "Strategic Advisor",
+        "subtitle": "Executive product perspective to sharpen direction.",
+        "body": "Board-level guidance, product strategy definition and review, critical decision support and revising Ways of Working. High-leverage access when it matters most.",
+        "triggers": [
+          "Strategy is in motion — and direction still feels uncertain",
+          "A high-stakes bet on the table: raise, new market, or strategic pivot",
+          "You're shipping — but it's not showing up in retention or revenue"
+        ]
+      },
+      {
+        "num": "03",
+        "tag": "Elevate",
+        "title": "Product Craft & Coaching",
+        "subtitle": "Level up your product leaders and teams already doing the work.",
+        "body": "Targeted 1:1 coaching and team workshops, built around where your leaders and teams need extra support.",
+        "triggers": [
+          "Develop your product leader for the next step",
+          "Establish and embed AI-native workflows",
+          "Bridging product strategy and execution"
+        ]
+      }
+    ]
+  },
+  "metrics": {
+    "label": "Proof in the numbers",
+    "items": [
+      {
+        "value": "40%",
+        "label": "ARR growth at Monday.com, scaled past $1B ARR"
+      },
+      {
+        "value": "−20%",
+        "label": "Churn reduction at BQE Software in under 10 months"
+      },
+      {
+        "value": "+230%",
+        "label": "NPS growth year-over-year at MobileCause"
+      }
+    ]
+  },
+  "about": {
+    "label": "Who I am",
+    "bio_p1": "I join growth-stage B2B SaaS companies to own product strategy, sharpen go-to-market execution, and build the operating foundation for compounding growth.",
+    "bio_p2": "Over 15 years I've scaled products from early stage to $1B+ ARR — across horizontal platforms like Monday.com, vertical SaaS like BQE Software, and consumer at Meta and PlayStation. I'm based in North America with deep market context, and bring an operator's accountability to every engagement.",
+    "credentials": "Kellogg MBA (Northwestern) · Technion BS EE · Speaker at ProductCon LA, ProductWorld, Product School, Product-Led Summit",
+    "headshot_alt": "Guy Assedou"
+  },
+  "faq": {
+    "label": "FAQ",
+    "items": [
+      {
+        "q": "What types of companies do you work with?",
+        "a": "Growth-stage B2B SaaS companies — typically Series A to Series C — that are navigating a product inflection point. That might be scaling past product-market fit, entering a new market, rebuilding a team, or preparing for a raise."
+      },
+      {
+        "q": "How is this different from hiring a full-time CPO?",
+        "a": "You get senior product leadership — strategy, execution, and team development — without the 12-month ramp, equity dilution, or full-time cost. Engagements are scoped to what you actually need, and can scale up or down as the business evolves."
+      },
+      {
+        "q": "What does a typical engagement look like?",
+        "a": "Most engagements start with a focused strategy sprint — understanding the business, the product, and the gaps — then move into an ongoing operating rhythm: weekly leadership, prioritization, and cross-functional alignment. The exact shape depends on where you are and what you need."
+      },
+      {
+        "q": "Do you work with multiple companies simultaneously?",
+        "a": "Yes, and deliberately so. Exposure to multiple growth-stage companies sharpens pattern recognition — what works, what doesn't, and how to move faster. I keep engagements limited to ensure each gets real attention."
+      },
+      {
+        "q": "How quickly can we get started?",
+        "a": "Typically within 1–2 weeks. The first step is a 30-minute call to understand the situation and see if it's a good fit. If it is, we move fast."
+      },
+      {
+        "q": "What's the minimum engagement length?",
+        "a": "Minimum three months. Real product leadership takes time to create durable results — a one-off advisory session is a different product. That said, strategy-only retainers can start shorter."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Ready to find your inflection point?",
+    "body": "15+ years of product leadership, on your team — without the full-time overhead.",
+    "btn": "Book a call"
+  },
+  "footer": {
+    "brand": "A7 Advisory",
+    "copyright": "© 2025 A7 Advisory · Guy Assedou",
+    "links": [
+      { "label": "Who I am", "href": "#about" },
+      { "label": "How I engage", "href": "#offerings" },
+      { "label": "FAQ", "href": "#faq" }
+    ]
+  }
+}
