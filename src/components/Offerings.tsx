@@ -15,7 +15,7 @@ type OfferingItem = {
   triggers: string[]
 }
 
-const ACCENTS = ["#8c52ff", "#e08448", "#1B3F8C"] as const
+const ACCENTS = ["#8c52ff", "#e08448", "#2FA38E", "#1B3F8C"] as const
 
 export function Offerings() {
   const t = useTranslations("offerings")

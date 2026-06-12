@@ -19,7 +19,7 @@
   },
   "offerings": {
     "label": "Product leadership, at every depth",
-    "heading": "Three ways to put senior product leadership on your team.",
+    "heading": "Ways to put senior product leadership on your team.",
     "trigger_label": "Right for you if",
     "cta": "Book a call",
     "items": [
@@ -27,8 +27,8 @@
         "num": "01",
         "tag": "Lead",
         "title": "Fractional CPO",
-        "subtitle": "Full product leadership, scoped to your inflection point.",
-        "body": "Own strategy, align go-to-market, and drive execution — without the cost or ramp of a full-time hire. Embedded in your team, operating on your cadence.",
+        "subtitle": "Full ownership of the product function — strategy through execution.",
+        "body": "Scaled to your inflection point: own strategy, align go-to-market, and drive execution — embedded in your team, operating on your cadence, without the cost or ramp of a full-time hire.",
         "triggers": [
           "Founder-led product — ready to hand it to a seasoned operator",
           "Scale and complexity have outgrown current product leadership",
@@ -39,8 +39,8 @@
         "num": "02",
         "tag": "Guide",
         "title": "Strategic Advisor",
-        "subtitle": "Executive product perspective to sharpen direction.",
-        "body": "Board-level guidance, product strategy definition and review, critical decision support and revising Ways of Working. High-leverage access when it matters most.",
+        "subtitle": "Your team owns the build — I pressure-test direction and sharpen decisions.",
+        "body": "Product strategy definition and review, critical decision support, and revising Ways of Working — high-leverage access when it matters most.",
         "triggers": [
           "Strategy is in motion — and direction still feels uncertain",
           "A high-stakes bet on the table: raise, new market, or strategic pivot",
@@ -49,8 +49,20 @@
       },
       {
         "num": "03",
+        "tag": "Execute",
+        "title": "Executive Operator",
+        "subtitle": "Strategic judgment at execution speed — one initiative, driven to launch.",
+        "body": "What slows launches is rarely the building — it's the unmade decisions: scope, sequencing, positioning, what good looks like. I take ownership of a single bet — an AI-native product, a new product line — making the strategic calls in real time and driving design, build, and iteration to launch.",
+        "triggers": [
+          "A strategic initiative on the table — and no senior owner to drive it",
+          "Deep technical capability that needs translating into a product people actually use",
+          "Delivery keeps stalling on decisions only a product executive can make"
+        ]
+      },
+      {
+        "num": "04",
         "tag": "Elevate",
-        "title": "Product Craft & Coaching",
+        "title": "Craft Coach",
         "subtitle": "Level up your product leaders and teams already doing the work.",
         "body": "Targeted 1:1 coaching and team workshops, built around where your leaders and teams need extra support.",
         "triggers": [
