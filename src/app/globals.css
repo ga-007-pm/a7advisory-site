@@ -74,6 +74,30 @@
   }
 }
 
+/* ─── Hero glow ambient drift ────────────────────────────────────────────── */
+/* Purple sits top-left → drifts down-right, toward page center */
+@keyframes glow-drift-a {
+  0%   { transform: translate(0, 0) scale(1); opacity: 1; }
+  33%  { transform: translate(140px, 85px) scale(1.15); opacity: 0.75; }
+  66%  { transform: translate(70px, 125px) scale(0.9); opacity: 1; }
+  100% { transform: translate(0, 0) scale(1); opacity: 1; }
+}
+
+/* Amber sits bottom-right → drifts up-left, toward page center */
+@keyframes glow-drift-b {
+  0%   { transform: translate(0, 0) scale(1); opacity: 1; }
+  40%  { transform: translate(-75px, -60px) scale(1.18); opacity: 1; }
+  75%  { transform: translate(-40px, -25px) scale(0.88); opacity: 0.7; }
+  100% { transform: translate(0, 0) scale(1); opacity: 1; }
+}
+
+.glow-drift-a { animation: glow-drift-a 9s ease-in-out infinite; }
+.glow-drift-b { animation: glow-drift-b 12s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-drift-a, .glow-drift-b { animation: none; }
+}
+
 body {
   background-color: #08080E;
   color: #F0EDFF;
