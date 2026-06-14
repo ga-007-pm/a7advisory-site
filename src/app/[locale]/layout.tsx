@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing"
 import { Providers } from "./providers"
 import { Nav } from "@/components/Nav"
 import { WhatsAppFab } from "@/components/WhatsAppFab"
+import { JsonLd } from "@/components/JsonLd"
 import "../globals.css"
 
 const inter = Inter({
@@ -68,6 +69,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={dir} className={inter.variable}>
+      <head>
+        <JsonLd />
+      </head>
       <body>
         <a
           href="#main-content"

@@ -121,6 +121,7 @@
   },
   "faq": {
     "label": "FAQ",
+    "heading": "Common questions.",
     "items": [
       {
         "q": "How is this different from hiring a full-time CPO?",

@@ -107,7 +107,7 @@ export function Faq() {
             className="text-3xl sm:text-4xl font-semibold tracking-tight"
             style={{ color: "#0F0F14" }}
           >
-            Common questions.
+            {t("heading")}
           </h2>
         </div>
 
