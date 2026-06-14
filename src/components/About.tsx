@@ -24,7 +24,7 @@ export function About() {
       id="about"
       aria-labelledby="about-heading"
       className="scroll-mt-20"
-      style={{ backgroundColor: "#FFFFFF" }}
+      style={{ backgroundColor: "#1A1A22" }}
     >
       <div className="section-inner section-py">
 
@@ -32,14 +32,14 @@ export function About() {
         <div className="max-w-3xl">
           <p
             className="text-[11px] font-semibold uppercase tracking-[0.12em] mb-4"
-            style={{ color: "#4B5563" }}
+            style={{ color: "#6E7294" }}
           >
             {t("label")}
           </p>
           <h2
             id="about-heading"
             className="text-3xl sm:text-4xl font-semibold tracking-tight"
-            style={{ color: "#0F0F14" }}
+            style={{ color: "#F0EDFF" }}
           >
             {t("heading")}
           </h2>
@@ -50,12 +50,13 @@ export function About() {
           <span
             aria-hidden="true"
             className="font-serif leading-none flex-shrink-0 select-none text-[4rem] md:text-[5rem]"
-            style={{ color: "#3B1F8C", lineHeight: 1 }}
+            style={{ color: "rgba(240,237,255,0.25)", lineHeight: 1 }}
           >
             &ldquo;
           </span>
           <p
             className="pull-quote md:text-2xl"
+            style={{ color: "#F0EDFF" }}
           >
             {t.rich("quote", {
               grad: (chunks: ReactNode) => (
@@ -79,7 +80,7 @@ export function About() {
 
           {/* Portrait */}
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#F4F3FA]">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[rgba(255,255,255,0.06)]">
               <img
                 src="/headshot.jpg"
                 alt={t("headshot_alt")}
@@ -97,7 +98,7 @@ export function About() {
                   <div
                     key={p.title}
                     className="group relative pl-8"
-                    style={{ borderLeft: "2px solid rgba(15,15,20,0.1)" }}
+                    style={{ borderLeft: "2px solid rgba(255,255,255,0.08)" }}
                   >
                     <div
                       aria-hidden="true"
@@ -114,13 +115,13 @@ export function About() {
                     </span>
                     <h3
                       className="mb-3 text-xl font-bold"
-                      style={{ color: "#0F0F14" }}
+                      style={{ color: "#F0EDFF" }}
                     >
                       {p.title}
                     </h3>
                     <p
                       className="text-[15px] leading-relaxed"
-                      style={{ color: "#6B7280" }}
+                      style={{ color: "#6E7294" }}
                     >
                       {p.body}
                     </p>
@@ -132,11 +133,11 @@ export function About() {
             {/* Credentials */}
             <div
               className="mt-12 flex flex-wrap items-center gap-x-4 gap-y-2 pt-8 text-xs font-semibold uppercase tracking-[0.18em]"
-              style={{ borderTop: "1px solid rgba(15,15,20,0.1)", color: "rgba(15,15,20,0.45)" }}
+              style={{ borderTop: "1px solid rgba(255,255,255,0.08)", color: "rgba(240,237,255,0.4)" }}
             >
               {credentials.map((c, i) => (
                 <span key={c} className="flex items-center gap-x-4">
-                  {i > 0 && <span style={{ color: "rgba(26,26,34,0.2)" }}>·</span>}
+                  {i > 0 && <span style={{ color: "rgba(240,237,255,0.2)" }}>·</span>}
                   <span>{c}</span>
                 </span>
               ))}
