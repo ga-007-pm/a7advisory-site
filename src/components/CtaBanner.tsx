@@ -16,12 +16,11 @@ export function CtaBanner() {
     >
       <div className="section-inner section-py">
         <div
-          className="relative overflow-hidden"
+          className="relative overflow-hidden px-6 py-10 sm:px-14 sm:py-20"
           style={{
             backgroundColor: "#1A1A22",
             border: "1px solid rgba(255,255,255,0.10)",
             borderRadius: "var(--radius-cta)",
-            padding: "80px 56px",
           }}
         >
           {/* Purple glow — top-left */}

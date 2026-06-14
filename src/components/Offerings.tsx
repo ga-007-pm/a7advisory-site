@@ -32,7 +32,7 @@ export function Offerings() {
       <div className="section-inner section-py">
 
         {/* Section header */}
-        <div className="mb-14 text-center">
+        <div className="mb-10 md:mb-14 text-center">
           <p
             className="text-[11px] font-semibold uppercase tracking-[0.12em]"
             style={{ color: "#6E7294" }}
@@ -48,14 +48,108 @@ export function Offerings() {
           </h2>
         </div>
 
-        {/* Split layout: 280px nav | 1fr content */}
+        {/* ── MOBILE: stacked cards ── */}
+        <div className="flex flex-col gap-4 md:hidden">
+          {items.map((item, i) => {
+            const accent = ACCENTS[i]
+            return (
+              <div
+                key={item.num}
+                className="rounded-[6px] overflow-hidden"
+                style={{
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  borderLeft: `3px solid ${accent}`,
+                }}
+              >
+                <div className="p-6">
+                  {/* Tag pill */}
+                  <span
+                    className="text-[10px] font-bold tracking-[0.14em] uppercase inline-block mb-4"
+                    style={{
+                      color: accent,
+                      border: `1px solid ${accent}4D`,
+                      borderRadius: "3px",
+                      padding: "3px 10px",
+                    }}
+                  >
+                    {item.tag}
+                  </span>
+
+                  {/* Title */}
+                  <h3
+                    className="text-[22px] font-extrabold tracking-[-0.03em] leading-[1.15] mb-2"
+                    style={{ color: "#F0EDFF" }}
+                  >
+                    {item.title}
+                  </h3>
+
+                  {/* Subtitle */}
+                  <p
+                    className="text-[15px] font-medium leading-[1.5] mb-4 pb-4"
+                    style={{
+                      color: "#F0EDFF",
+                      opacity: 0.7,
+                      borderBottom: "1px solid rgba(255,255,255,0.08)",
+                    }}
+                  >
+                    {item.subtitle}
+                  </p>
+
+                  {/* Body */}
+                  <p
+                    className="text-[14px] leading-[1.75] mb-5"
+                    style={{ color: "#6E7294" }}
+                  >
+                    {item.body}
+                  </p>
+
+                  {/* Triggers */}
+                  <p
+                    className="text-[10px] font-semibold tracking-[0.10em] uppercase mb-3"
+                    style={{ color: "#6E7294" }}
+                  >
+                    {t("trigger_label")}
+                  </p>
+                  <ul className="flex flex-col gap-2">
+                    {item.triggers.map((trigger, j) => (
+                      <li
+                        key={j}
+                        className="flex items-start gap-2.5 text-[13px] leading-[1.5]"
+                        style={{ color: "#F0EDFF", opacity: 0.75 }}
+                      >
+                        <span
+                          className="rounded-full shrink-0 mt-[6px]"
+                          style={{
+                            width: "5px",
+                            height: "5px",
+                            backgroundColor: accent,
+                            display: "inline-block",
+                          }}
+                        />
+                        {trigger}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )
+          })}
+
+          {/* Single CTA below all cards */}
+          <div className="pt-4">
+            <Button variant="primary" href={CALENDLY_URL} innerBg="#1A1A22">
+              {t("cta")}
+            </Button>
+          </div>
+        </div>
+
+        {/* ── DESKTOP: sticky split panel ── */}
         <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "280px 1fr",
-          }}
+          className="hidden md:grid"
+          style={{ gridTemplateColumns: "280px 1fr" }}
         >
-          {/* ── LEFT NAV ── */}
+          {/* LEFT NAV */}
           <nav
             style={{
               borderRight: "1px solid rgba(255,255,255,0.08)",
@@ -116,9 +210,8 @@ export function Offerings() {
             })}
           </nav>
 
-          {/* ── RIGHT CONTENT ── */}
+          {/* RIGHT CONTENT */}
           <div style={{ paddingLeft: "56px", minHeight: "500px" }} className="flex flex-col">
-
             <AnimatePresence mode="wait">
               <motion.div
                 key={active}
@@ -133,7 +226,6 @@ export function Offerings() {
                   const accent = ACCENTS[active]
                   return (
                     <>
-                      {/* Tag pill */}
                       <span
                         className="text-[10px] font-bold tracking-[0.14em] uppercase inline-block mb-4"
                         style={{
@@ -146,7 +238,6 @@ export function Offerings() {
                         {item.tag}
                       </span>
 
-                      {/* Title */}
                       <h3
                         className="text-[28px] font-extrabold tracking-[-0.03em] leading-[1.15] mb-2.5"
                         style={{ color: "#F0EDFF" }}
@@ -154,7 +245,6 @@ export function Offerings() {
                         {item.title}
                       </h3>
 
-                      {/* Subtitle */}
                       <p
                         className="text-[16px] font-medium leading-[1.5] mb-5 pb-5"
                         style={{
@@ -166,7 +256,6 @@ export function Offerings() {
                         {item.subtitle}
                       </p>
 
-                      {/* Body */}
                       <p
                         className="text-[15px] leading-[1.75] mb-7"
                         style={{ color: "#6E7294" }}
@@ -174,7 +263,6 @@ export function Offerings() {
                         {item.body}
                       </p>
 
-                      {/* Triggers */}
                       <p
                         className="text-[11px] font-semibold tracking-[0.10em] uppercase mb-3"
                         style={{ color: "#6E7294" }}
@@ -207,13 +295,11 @@ export function Offerings() {
               </motion.div>
             </AnimatePresence>
 
-            {/* CTA — outside AnimatePresence, never re-renders on panel switch */}
             <div className="mt-auto pt-8">
               <Button variant="primary" href={CALENDLY_URL} innerBg="#1A1A22">
                 {t("cta")}
               </Button>
             </div>
-
           </div>
         </div>
 

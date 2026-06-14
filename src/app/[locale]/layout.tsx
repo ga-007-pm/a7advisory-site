@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl"
 import { routing } from "@/i18n/routing"
 import { Providers } from "./providers"
 import { Nav } from "@/components/Nav"
+import { WhatsAppFab } from "@/components/WhatsAppFab"
 import "../globals.css"
 
 const inter = Inter({
@@ -78,6 +79,7 @@ export default async function LocaleLayout({
           <Providers>
             <Nav />
             <main id="main-content">{children}</main>
+            <WhatsAppFab />
           </Providers>
         </NextIntlClientProvider>
       </body>

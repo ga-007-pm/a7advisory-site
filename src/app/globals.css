@@ -61,10 +61,17 @@
     }
   }
 
-  /* Standard section vertical padding — offerings, metrics, about, faq, cta */
+  /* Standard section vertical padding — mobile 48px, desktop 72px */
   .section-py {
-    padding-top: 4.5rem;    /* 72px */
-    padding-bottom: 4.5rem;
+    padding-top: 3rem;      /* 48px mobile */
+    padding-bottom: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-py {
+      padding-top: 4.5rem;  /* 72px desktop */
+      padding-bottom: 4.5rem;
+    }
   }
 
   /* Compact vertical padding — logos bar */

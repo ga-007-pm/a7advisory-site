@@ -19,13 +19,13 @@ export function Logos() {
       style={{ backgroundColor: "#F4F3FA", borderColor: "#E2E0EF" }}
     >
       <div className="section-inner section-py-sm">
-        <div className="grid grid-cols-3 place-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 place-items-center gap-y-8">
           {LOGOS.map(({ name, file, h }) => (
             <img
               key={name}
               src={`/logos/${file}`}
               alt={name}
-              className="grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+              className="grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100 max-h-12 sm:max-h-none"
               style={{ height: `${h}px`, width: "auto", mixBlendMode: "multiply" }}
               onError={(e) => { e.currentTarget.style.display = "none" }}
             />

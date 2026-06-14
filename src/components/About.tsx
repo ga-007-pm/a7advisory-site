@@ -46,7 +46,7 @@ export function About() {
         </div>
 
         {/* Full-width pull quote */}
-        <blockquote className="flex items-center gap-4 mt-16">
+        <blockquote className="flex items-center gap-4 mt-10 md:mt-16">
           <span
             aria-hidden="true"
             className="font-serif leading-none flex-shrink-0 select-none text-[4rem] md:text-[5rem]"
@@ -76,7 +76,7 @@ export function About() {
         </blockquote>
 
         {/* Two-column conversation */}
-        <div className="mt-20 grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-20">
+        <div className="mt-12 md:mt-20 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
 
           {/* Portrait */}
           <div className="lg:col-span-5">
