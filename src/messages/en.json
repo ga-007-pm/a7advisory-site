@@ -143,15 +143,13 @@
   "cta": {
     "heading": "Let's turn your product into leverage.",
     "body": "A 30-minute call to map where product leadership creates the most impact. No pitch, no commitment.",
-    "btn": "Book a call"
+    "btn": "Book a call",
+    "or_reach": "Or contact me directly"
   },
   "footer": {
-    "brand": "A7 Advisory",
-    "copyright": "© 2025 A7 Advisory · Guy Assedou",
-    "links": [
-      { "label": "Who I am", "href": "#about" },
-      { "label": "How I engage", "href": "#offerings" },
-      { "label": "FAQ", "href": "#faq" }
-    ]
+    "tagline": "Turn product into leverage.",
+    "nav_heading": "Navigate",
+    "follow_heading": "Follow",
+    "copyright": "© 2026 Guy Assedou · A7 Advisory · All rights reserved."
   }
 }

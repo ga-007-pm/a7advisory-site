@@ -98,7 +98,7 @@ export function Faq() {
         <div className="max-w-3xl mx-auto mb-14 text-center">
           <p
             className="text-[11px] font-semibold uppercase tracking-[0.12em] mb-4"
-            style={{ color: "#4B5563" }}
+            style={{ color: "#3B1F8C" }}
           >
             {t("label")}
           </p>

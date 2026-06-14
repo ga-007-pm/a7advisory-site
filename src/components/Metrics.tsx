@@ -22,7 +22,7 @@ export function Metrics() {
         <p
           id="metrics-heading"
           className="text-[11px] font-semibold uppercase tracking-[0.12em] mb-14"
-          style={{ color: "#4B5563" }}
+          style={{ color: "#3B1F8C" }}
         >
           {t("label")}
         </p>

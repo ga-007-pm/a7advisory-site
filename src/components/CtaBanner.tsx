@@ -1,8 +1,9 @@
 "use client"
 
 import { useTranslations } from "next-intl"
+import { Phone, Mail } from "lucide-react"
 import { Button } from "./Button"
-import { CALENDLY_URL } from "@/lib/constants"
+import { CALENDLY_URL, PHONE_URL, PHONE_DISPLAY, EMAIL } from "@/lib/constants"
 
 export function CtaBanner() {
   const t = useTranslations("cta")
@@ -65,6 +66,18 @@ export function CtaBanner() {
                 {t("btn")}
               </Button>
             </div>
+
+            <p className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-[13px]" style={{ color: "rgba(240,237,255,0.4)" }}>
+              <span>{t("or_reach")}:</span>
+              <a href={PHONE_URL} className="inline-flex items-center gap-1.5 transition-colors duration-200 hover:text-[#F0EDFF]">
+                <Phone size={13} />
+                {PHONE_DISPLAY}
+              </a>
+              <a href={EMAIL} className="inline-flex items-center gap-1.5 transition-colors duration-200 hover:text-[#F0EDFF]">
+                <Mail size={13} />
+                guy.assedou@gmail.com
+              </a>
+            </p>
           </div>
         </div>
       </div>

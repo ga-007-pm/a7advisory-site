@@ -6,6 +6,7 @@ import { Metrics } from "@/components/Metrics"
 import { About } from "@/components/About"
 import { Faq } from "@/components/Faq"
 import { CtaBanner } from "@/components/CtaBanner"
+import { Footer } from "@/components/Footer"
 
 export default async function Page({
   params,
@@ -24,6 +25,7 @@ export default async function Page({
       <About />
       <Faq />
       <CtaBanner />
+      <Footer />
     </main>
   )
 }
