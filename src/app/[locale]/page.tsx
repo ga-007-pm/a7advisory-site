@@ -5,6 +5,7 @@ import { Offerings } from "@/components/Offerings"
 import { Metrics } from "@/components/Metrics"
 import { About } from "@/components/About"
 import { Faq } from "@/components/Faq"
+import { CtaBanner } from "@/components/CtaBanner"
 
 export default async function Page({
   params,
@@ -22,6 +23,7 @@ export default async function Page({
       <Metrics />
       <About />
       <Faq />
+      <CtaBanner />
     </main>
   )
 }

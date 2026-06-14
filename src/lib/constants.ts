@@ -2,3 +2,6 @@ export const WHATSAPP_URL = "https://wa.me/972533448446"
 export const CALENDLY_URL = "#" // placeholder — update when ready
 export const SITE_URL = "https://a7advisory.ai"
 export const LINKEDIN_URL = "https://www.linkedin.com/in/guyassedou"
+export const EMAIL = "mailto:guy.assedou@gmail.com"
+export const PHONE_URL = "tel:+972533448446"
+export const PHONE_DISPLAY = "+972 53 344-8446"
