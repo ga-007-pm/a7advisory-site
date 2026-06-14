@@ -4,12 +4,12 @@
     "whatsapp_label": "WhatsApp"
   },
   "hero": {
-    "eyebrow": "Fractional CPO · Strategic Advisor",
+    "eyebrow": "When more effort isn't the answer.",
     "headline": "Turn product into leverage.",
     "sub_prefix": "Driving",
     "sub_suffix": "growth through",
     "slot1": ["ARR", "NRR", "ACV"],
-    "slot2": ["sharper bets", "faster execution", "AI-native products & workflows"],
+    "slot2": ["AI-native products & workflows", "sharper bets", "faster execution"],
     "btn_primary": "Book a call",
     "btn_secondary": "See how it works"
   },
@@ -21,7 +21,7 @@
     "label": "Product leadership, at every depth",
     "heading": "The right level of product leadership — for the leap you're making.",
     "trigger_label": "Right for you if",
-    "cta": "Find the right level",
+    "cta": "Book a call",
     "items": [
       {
         "num": "01",
@@ -30,9 +30,9 @@
         "subtitle": "Full ownership of the product function — strategy through execution.",
         "body": "Scaled to your inflection point: own strategy, align go-to-market, and drive execution — embedded in your team, operating on your cadence, without the cost or ramp of a full-time hire.",
         "triggers": [
+          "AI-native product or capabilities on the table — and no senior owner to drive it",
           "Founder-led product — ready to hand it to a seasoned operator",
-          "Scale and complexity have outgrown current product leadership",
-          "CPO-caliber experience — without the full-time hire"
+          "Scale and complexity have outgrown current product leadership"
         ]
       },
       {
@@ -44,7 +44,7 @@
         "triggers": [
           "You're shipping — but it's not showing up in retention or revenue",
           "A high-stakes bet on the table: raise, new market, or strategic pivot",
-          "Strategy is in motion — and direction still feels uncertain"
+          "Execution is stalling — and the team needs a senior hand to accelerate"
         ]
       },
       {
@@ -113,10 +113,10 @@
       {
         "kicker": "Ahead",
         "title": "Close to the craft",
-        "body": "I mentor PMs and speak at ProductCon LA, ProductWorld, and Product-Led Summit. Staying close to how good product thinking spreads keeps what I bring you sharp."
+        "body": "I mentor PMs and speak at ProductCon LA, ProductWorld, and Product-Led Summit. Staying close to how AI is reshaping product — through mentoring, speaking, and building — keeps what I bring you sharp."
       }
     ],
-    "credentials": "Kellogg MBA · Technion BS EE · IDF Major",
+    "credentials": "Kellogg MBA (strategy) · Technion BS EE (engineering) · IDF Major (leadership)",
     "headshot_alt": "Guy Assedou"
   },
   "faq": {
@@ -138,6 +138,14 @@
       {
         "q": "How quickly can we get started?",
         "a": "Typically within 1–2 weeks. The first step is a 30-minute call to understand the situation and see if it's a good fit. If it is, we move fast."
+      },
+      {
+        "q": "How do you manage working with multiple clients at once?",
+        "a": "Each engagement runs on a defined operating cadence — dedicated weekly time, not reactive availability. The structure is intentional: it forces prioritization and keeps the work high-leverage. I carry a small number of active engagements at any one time, so you get consistent, focused attention — not a fractional slice of someone stretched thin."
+      },
+      {
+        "q": "How do you approach AI in product strategy?",
+        "a": "AI isn't a feature layer — it's a rethinking of what the product does and how the team operates. I help founders separate real leverage from noise: which bets to make, how to sequence them, and how to build the AI-native workflows that actually compound. I've led this work across B2B SaaS at multiple stages."
       }
     ]
   },
