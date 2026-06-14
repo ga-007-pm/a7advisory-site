@@ -4,6 +4,7 @@ import { Logos } from "@/components/Logos"
 import { Offerings } from "@/components/Offerings"
 import { Metrics } from "@/components/Metrics"
 import { About } from "@/components/About"
+import { Faq } from "@/components/Faq"
 
 export default async function Page({
   params,
@@ -20,6 +21,7 @@ export default async function Page({
       <Offerings />
       <Metrics />
       <About />
+      <Faq />
     </main>
   )
 }

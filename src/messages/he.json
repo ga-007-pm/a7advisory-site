@@ -123,28 +123,20 @@
     "label": "FAQ",
     "items": [
       {
-        "q": "What types of companies do you work with?",
-        "a": "Growth-stage B2B SaaS companies — typically Series A to Series C — that are navigating a product inflection point. That might be scaling past product-market fit, entering a new market, rebuilding a team, or preparing for a raise."
-      },
-      {
         "q": "How is this different from hiring a full-time CPO?",
-        "a": "You get senior product leadership — strategy, execution, and team development — without the 12-month ramp, equity dilution, or full-time cost. Engagements are scoped to what you actually need, and can scale up or down as the business evolves."
+        "a": "You get senior product leadership — strategy, execution, and team development — without the six-month search, 12-month ramp, equity dilution, or full-time cost. Engagements are scoped to what you actually need, and can scale up or down as the business evolves. Not sure which model fits? The 30-minute call usually makes it clear."
       },
       {
         "q": "What does a typical engagement look like?",
-        "a": "Most engagements start with a focused strategy sprint — understanding the business, the product, and the gaps — then move into an ongoing operating rhythm: weekly leadership, prioritization, and cross-functional alignment. The exact shape depends on where you are and what you need."
+        "a": "It depends on the engagement — and that range is intentional. A focused workshop can be a single day. Advisory retainers run month-to-month with regular touchpoints. Owning a single initiative runs two to four months. Embedded fractional CPO work runs three to six months with a weekly operating cadence. In all cases, you get dedicated time — not a revolving door. The first conversation is usually enough to figure out which shape fits."
       },
       {
-        "q": "Do you work with multiple companies simultaneously?",
-        "a": "Yes, and deliberately so. Exposure to multiple growth-stage companies sharpens pattern recognition — what works, what doesn't, and how to move faster. I keep engagements limited to ensure each gets real attention."
+        "q": "What's the minimum engagement length?",
+        "a": "Fractional CPO work runs a minimum of three months — strategy needs time to materialize and compound. Advisory retainers run month-to-month. Coaching and workshops can be as short as a single session. The right length becomes clear once we understand what you're solving for."
       },
       {
         "q": "How quickly can we get started?",
         "a": "Typically within 1–2 weeks. The first step is a 30-minute call to understand the situation and see if it's a good fit. If it is, we move fast."
-      },
-      {
-        "q": "What's the minimum engagement length?",
-        "a": "Minimum three months. Real product leadership takes time to create durable results — a one-off advisory session is a different product. That said, strategy-only retainers can start shorter."
       }
     ]
   },
