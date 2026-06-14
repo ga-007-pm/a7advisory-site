@@ -1,8 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion"
 import { useTranslations } from "next-intl"
+import { STAGGER, FADE_UP_SM } from "@/lib/motion"
 
 type FaqItem = {
   q: string
@@ -68,10 +69,7 @@ function FaqItem({ item }: { item: FaqItem }) {
             transition={{ duration: 0.28, ease: "easeInOut" }}
             style={{ overflow: "hidden" }}
           >
-            <p
-              className="pb-6 text-[15px] leading-relaxed"
-              style={{ color: "#4B5563" }}
-            >
+            <p className="pb-6 text-[15px] leading-relaxed" style={{ color: "#4B5563" }}>
               {item.a}
             </p>
           </motion.div>
@@ -84,6 +82,7 @@ function FaqItem({ item }: { item: FaqItem }) {
 export function Faq() {
   const t = useTranslations("faq")
   const items = t.raw("items") as FaqItem[]
+  const reduced = useReducedMotion()
 
   return (
     <section
@@ -94,28 +93,35 @@ export function Faq() {
     >
       <div className="section-inner section-py">
 
-        {/* Header — centred, mirrors Lovable layout */}
-        <div className="max-w-3xl mx-auto mb-14 text-center">
-          <p
-            className="text-[11px] font-semibold uppercase tracking-[0.12em] mb-4"
-            style={{ color: "#3B1F8C" }}
-          >
+        <motion.div
+          className="max-w-3xl mx-auto mb-14 text-center"
+          variants={FADE_UP_SM}
+          initial={reduced ? false : "hidden"}
+          whileInView="show"
+          viewport={{ once: true, margin: "-80px" }}
+        >
+          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] mb-4" style={{ color: "#3B1F8C" }}>
             {t("label")}
           </p>
-          <h2
-            id="faq-heading"
-            className="text-3xl sm:text-4xl font-semibold tracking-tight"
-            style={{ color: "#0F0F14" }}
-          >
+          <h2 id="faq-heading" className="text-3xl sm:text-4xl font-semibold tracking-tight" style={{ color: "#0F0F14" }}>
             {t("heading")}
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="max-w-3xl mx-auto" style={{ borderTop: "1px solid rgba(15,15,20,0.1)" }}>
+        <motion.div
+          className="max-w-3xl mx-auto"
+          style={{ borderTop: "1px solid rgba(15,15,20,0.1)" }}
+          variants={STAGGER}
+          initial={reduced ? false : "hidden"}
+          whileInView="show"
+          viewport={{ once: true, margin: "-80px" }}
+        >
           {items.map((item, i) => (
-            <FaqItem key={i} item={item} />
+            <motion.div key={i} variants={FADE_UP_SM}>
+              <FaqItem item={item} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>

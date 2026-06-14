@@ -1,6 +1,8 @@
 "use client"
 
+import { motion, useReducedMotion } from "framer-motion"
 import { useTranslations } from "next-intl"
+import { STAGGER, FADE_UP } from "@/lib/motion"
 
 type Metric = {
   value: string
@@ -10,6 +12,7 @@ type Metric = {
 export function Metrics() {
   const t = useTranslations("metrics")
   const items = t.raw("items") as Metric[]
+  const reduced = useReducedMotion()
 
   return (
     <section
@@ -19,17 +22,31 @@ export function Metrics() {
       style={{ backgroundColor: "#F4F3FA" }}
     >
       <div className="section-inner section-py">
-        <p
+        <motion.p
           id="metrics-heading"
           className="text-[11px] font-semibold uppercase tracking-[0.12em] mb-14 text-center md:text-left"
           style={{ color: "#3B1F8C" }}
+          variants={FADE_UP}
+          initial={reduced ? false : "hidden"}
+          whileInView="show"
+          viewport={{ once: true, margin: "-80px" }}
         >
           {t("label")}
-        </p>
+        </motion.p>
 
-        <div className="grid gap-8 md:grid-cols-3 md:gap-6">
+        <motion.div
+          className="grid gap-8 md:grid-cols-3 md:gap-6"
+          variants={STAGGER}
+          initial={reduced ? false : "hidden"}
+          whileInView="show"
+          viewport={{ once: true, margin: "-80px" }}
+        >
           {items.map((m) => (
-            <div key={m.label} className="flex flex-col items-center text-center md:items-start md:text-left">
+            <motion.div
+              key={m.label}
+              variants={FADE_UP}
+              className="flex flex-col items-center text-center md:items-start md:text-left"
+            >
               <div className="metric-num text-[52px] sm:text-[64px] md:text-[80px] font-extrabold tracking-[-0.03em] leading-none">
                 {m.value}
               </div>
@@ -39,9 +56,9 @@ export function Metrics() {
               >
                 {m.label}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )
