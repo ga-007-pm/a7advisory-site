@@ -19,9 +19,9 @@
   },
   "offerings": {
     "label": "Product leadership, at every depth",
-    "heading": "Ways to put senior product leadership on your team.",
+    "heading": "The right level of product leadership — for the leap you're making.",
     "trigger_label": "Right for you if",
-    "cta": "Book a call",
+    "cta": "Find the right level",
     "items": [
       {
         "num": "01",
@@ -40,41 +40,41 @@
         "tag": "Guide",
         "title": "Strategic Advisor",
         "subtitle": "Your team owns the build — I pressure-test direction and sharpen decisions.",
-        "body": "Product strategy definition and review, critical decision support, and revising Ways of Working — high-leverage access when it matters most.",
+        "body": "Some bets are too expensive to get wrong. I sharpen product direction, pressure-test the decisions that matter most, and reorient the team around outcomes over output — high-leverage counsel, on your pace, when the stakes are highest.",
         "triggers": [
-          "Strategy is in motion — and direction still feels uncertain",
+          "You're shipping — but it's not showing up in retention or revenue",
           "A high-stakes bet on the table: raise, new market, or strategic pivot",
-          "You're shipping — but it's not showing up in retention or revenue"
+          "Strategy is in motion — and direction still feels uncertain"
         ]
       },
       {
         "num": "03",
         "tag": "Execute",
         "title": "Executive Operator",
-        "subtitle": "Strategic judgment at execution speed — one initiative, driven to launch.",
+        "subtitle": "One strategic initiative — I own it from concept to launch.",
         "body": "What slows launches is rarely the building — it's the unmade decisions: scope, sequencing, positioning, what good looks like. I take ownership of a single bet — an AI-native product, a new product line — making the strategic calls in real time and driving design, build, and iteration to launch.",
         "triggers": [
           "A strategic initiative on the table — and no senior owner to drive it",
-          "Deep technical capability that needs translating into a product people actually use",
-          "Delivery keeps stalling on decisions only a product executive can make"
+          "Delivery keeps stalling on decisions only a product executive can make",
+          "Deep technical capability that needs translating into a product people actually use"
         ]
       },
       {
         "num": "04",
         "tag": "Elevate",
         "title": "Craft Coach",
-        "subtitle": "Level up your product leaders and teams already doing the work.",
-        "body": "Targeted 1:1 coaching and team workshops, built around where your leaders and teams need extra support.",
+        "subtitle": "Raise the craft and skills of the leaders and teams already doing the work.",
+        "body": "Your people have the raw material — what compresses the learning curve is working with someone who's done it. Structured 1:1 coaching for your product leader, hands-on team workshops, and AI-native ways of working — building both the leadership and the craft your next stage demands.",
         "triggers": [
-          "Develop your product leader for the next step",
-          "Establish and embed AI-native workflows",
-          "Bridging product strategy and execution"
+          "Your product leader is two steps from ready — and you need them ready now",
+          "You're betting on AI-native workflows — and no one owns the transition",
+          "Velocity is capped by craft and decision-making, not headcount"
         ]
       }
     ]
   },
   "metrics": {
-    "label": "Proof in the numbers",
+    "label": "Proven Impact",
     "items": [
       {
         "value": "40%",
@@ -91,28 +91,27 @@
     ]
   },
   "about": {
-    "label": "Who I am",
+    "label": "The operator behind the practice",
     "heading": "Meet Guy Assedou.",
-    "subtitle": "The operator behind the practice.",
-    "quote": "What drives me is helping leaders realize their vision and build products that create real impact.",
+    "quote": "What drives me is helping leaders <grad>realize their vision</grad> and create real impact.",
     "points": [
       {
-        "num": "01",
+        "kicker": "Seasoned",
         "title": "The inflection point is the job",
         "body": "The most valuable company moments happen at transition — when the foundation exists but the path forward isn't clear. The work is knowing where to focus and how to make every bet move the metrics that matter."
       },
       {
-        "num": "02",
+        "kicker": "T-shaped",
         "title": "Pattern recognition, earned",
-        "body": "Built across B2B SaaS, B2C2C, and consumer — global enterprises and early-stage startups, horizontal and vertical markets. Breadth across distinct contexts is what turns experience into instinct."
+        "body": "Built across B2B SaaS, B2C2C, and consumer — global enterprises and early-stage startups, horizontal and vertical markets. Breadth across distinct contexts — and the reps to master each — is what turns experience into instinct."
       },
       {
-        "num": "03",
-        "title": "Built for the US market",
-        "body": "A decade embedded inside American SaaS — not advising from a distance, but building. GTM dynamics, investor framing, cultural context: I know this market from the inside."
+        "kicker": "Fluent",
+        "title": "Expertise in the US & Israeli markets",
+        "body": "A decade embedded inside American SaaS, with deep roots in Israel's tech ecosystem — not advising from a distance, but building. GTM dynamics, investor framing, cultural context: I know these markets from the inside."
       },
       {
-        "num": "04",
+        "kicker": "Ahead",
         "title": "Close to the craft",
         "body": "I mentor PMs and speak at ProductCon LA, ProductWorld, and Product-Led Summit. Staying close to how good product thinking spreads keeps what I bring you sharp."
       }

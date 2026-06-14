@@ -1,229 +1,148 @@
 "use client"
 
 import { useTranslations } from "next-intl"
+import type { ReactNode } from "react"
 
 type AboutPoint = {
-  num: string
+  kicker: string
   title: string
   body: string
 }
 
 const GRAD = "linear-gradient(90deg, #8c52ff 0%, #a86bff 48%, #e08448 100%)"
-const ICON_COLOR = "#3D3D4E"
 
-function TargetIcon() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={ICON_COLOR} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="10" />
-      <circle cx="12" cy="12" r="3" />
-    </svg>
-  )
-}
-
-function LayersIcon() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={ICON_COLOR} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <polygon points="12 2 2 7 12 12 22 7 12 2" />
-      <polyline points="2 17 12 22 22 17" />
-      <polyline points="2 12 12 17 22 12" />
-    </svg>
-  )
-}
-
-function MapPinIcon() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={ICON_COLOR} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-      <circle cx="12" cy="10" r="3" />
-    </svg>
-  )
-}
-
-function MicIcon() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={ICON_COLOR} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
-      <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-      <line x1="12" y1="19" x2="12" y2="23" />
-      <line x1="8" y1="23" x2="16" y2="23" />
-    </svg>
-  )
-}
-
-const ICONS = [TargetIcon, LayersIcon, MapPinIcon, MicIcon]
+// Offering accent colors — one per kicker, in order.
+const KICKER_COLORS = ["#8c52ff", "#e08448", "#2FA38E", "#1B3F8C"]
 
 export function About() {
   const t = useTranslations("about")
   const points = t.raw("points") as AboutPoint[]
+  const credentials = t("credentials").split(" · ")
 
   return (
     <section
       id="about"
       aria-labelledby="about-heading"
+      className="scroll-mt-20"
       style={{ backgroundColor: "#FFFFFF" }}
     >
       <div className="section-inner section-py">
 
         {/* Header */}
-        <div className="mb-10">
+        <div className="max-w-3xl">
           <p
             className="text-[11px] font-semibold uppercase tracking-[0.12em] mb-4"
-            style={{ color: "#9CA3AF" }}
+            style={{ color: "#4B5563" }}
           >
             {t("label")}
           </p>
           <h2
             id="about-heading"
-            className="text-[40px] md:text-[48px] font-extrabold tracking-[-0.03em] leading-[1.1] mb-3"
-            style={{ color: "#0F0F14" }}
+            className="text-4xl sm:text-5xl font-bold tracking-tight"
+            style={{ color: "#1A1A22" }}
           >
             {t("heading")}
           </h2>
-          <p className="text-[18px] font-medium" style={{ color: "#6B7280" }}>
-            {t("subtitle")}
-          </p>
         </div>
 
-        {/* Quote */}
-        <div className="mb-14 relative" style={{ paddingLeft: 24 }}>
-          <div
+        {/* Full-width pull quote */}
+        <blockquote className="relative mt-16 pt-10">
+          <span
             aria-hidden="true"
-            style={{
-              position: "absolute",
-              left: 0,
-              top: 0,
-              bottom: 0,
-              width: 3,
-              borderRadius: 2,
-              background: GRAD,
-            }}
-          />
+            className="pointer-events-none absolute -left-1 top-0 font-serif leading-none text-[6rem] sm:text-[8rem]"
+            style={{ color: "rgba(59, 31, 140, 0.22)" }}
+          >
+            &ldquo;
+          </span>
           <p
-            className="text-[11px] font-semibold uppercase tracking-[0.12em] mb-3"
-            style={{ color: "#9CA3AF" }}
+            className="relative max-w-4xl text-2xl md:text-[28px] font-bold italic leading-[1.35]"
+            style={{ color: "#1A1A22" }}
           >
-            In my own words
-          </p>
-          <blockquote
-            style={{
-              fontSize: 20,
-              fontStyle: "italic",
-              fontWeight: 500,
-              lineHeight: 1.65,
-              color: "#1A1A2E",
-              margin: 0,
-            }}
-          >
-            &ldquo;{t("quote")}&rdquo;
-          </blockquote>
-        </div>
-
-        {/* 2-col: timeline left, photo right */}
-        <div className="grid md:grid-cols-[1fr_340px] gap-10 md:gap-16 items-start">
-
-          {/* Left: timeline */}
-          <div className="flex flex-col">
-            {points.map((point, i) => {
-              const isLast = i === points.length - 1
-              const Icon = ICONS[i]
-              return (
-                <div key={point.num} className="flex gap-5">
-
-                  {/* Timeline track: icon + connecting line */}
-                  <div
-                    className="flex flex-col items-center"
-                    style={{ width: 56, flexShrink: 0 }}
-                  >
-                    <div
-                      style={{
-                        width: 56,
-                        height: 56,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexShrink: 0,
-                      }}
-                    >
-                      <Icon />
-                    </div>
-
-                    {!isLast && (
-                      <div
-                        style={{
-                          width: 1,
-                          flexGrow: 1,
-                          minHeight: 28,
-                          margin: "4px 0",
-                          borderRadius: 1,
-                          background: "rgba(140,82,255,0.2)",
-                        }}
-                      />
-                    )}
-                  </div>
-
-                  {/* Content */}
-                  <div
-                    style={{
-                      paddingTop: 14,
-                      paddingBottom: isLast ? 0 : 32,
-                      flexGrow: 1,
-                    }}
-                  >
-                    <p
-                      style={{
-                        fontSize: 17,
-                        fontWeight: 600,
-                        color: "#0F0F14",
-                        lineHeight: 1.3,
-                        marginBottom: 8,
-                      }}
-                    >
-                      {point.title}
-                    </p>
-                    <p
-                      style={{
-                        fontSize: 15,
-                        lineHeight: 1.8,
-                        color: "#374151",
-                      }}
-                    >
-                      {point.body}
-                    </p>
-                  </div>
-                </div>
-              )
+            {t.rich("quote", {
+              grad: (chunks: ReactNode) => (
+                <span
+                  style={{
+                    background: GRAD,
+                    WebkitBackgroundClip: "text",
+                    backgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  {chunks}
+                </span>
+              ),
             })}
+          </p>
+        </blockquote>
 
-            <p
-              className="text-[12px] mt-4"
-              style={{ color: "#9CA3AF", letterSpacing: "0.02em", marginLeft: 76 }}
-            >
-              {t("credentials")}
-            </p>
-          </div>
+        {/* Two-column conversation */}
+        <div className="mt-20 grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-20">
 
-          {/* Right: sticky photo placeholder */}
-          <div
-            className="hidden md:block"
-            style={{ position: "sticky", top: "88px", alignSelf: "start" }}
-          >
-            <div
-              className="w-full rounded-[6px]"
-              style={{
-                aspectRatio: "3/4",
-                background: "linear-gradient(160deg, #F4F3FA 0%, #EAE7F7 100%)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "1px dashed rgba(140,82,255,0.2)",
-              }}
-            >
-              <span className="text-[13px] font-medium" style={{ color: "#C4B8E8" }}>
-                headshot
-              </span>
+          {/* Portrait */}
+          <div className="lg:col-span-5">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#F4F3FA]">
+              <img
+                src="/headshot.jpg"
+                alt={t("headshot_alt")}
+                className="h-full w-full object-cover object-top"
+              />
             </div>
           </div>
 
+          {/* Conversational points */}
+          <div className="lg:col-span-7 lg:pt-8">
+            <div className="space-y-10">
+              {points.map((p, i) => {
+                const accent = KICKER_COLORS[i % KICKER_COLORS.length]
+                return (
+                  <div
+                    key={p.title}
+                    className="group relative pl-8"
+                    style={{ borderLeft: "2px solid rgba(26,26,34,0.1)" }}
+                  >
+                    <div
+                      aria-hidden="true"
+                      className="absolute -left-[2px] top-0 h-8 w-[3px] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      style={{
+                        background: `linear-gradient(180deg, ${accent} 0%, transparent 100%)`,
+                      }}
+                    />
+                    <span
+                      className="mb-2 block text-[11px] font-bold uppercase tracking-[0.18em]"
+                      style={{ color: accent }}
+                    >
+                      {p.kicker}
+                    </span>
+                    <h3
+                      className="mb-3 text-xl font-bold"
+                      style={{ color: "#1A1A22" }}
+                    >
+                      {p.title}
+                    </h3>
+                    <p
+                      className="text-[15px] leading-relaxed"
+                      style={{ color: "rgba(26,26,34,0.7)" }}
+                    >
+                      {p.body}
+                    </p>
+                  </div>
+                )
+              })}
+            </div>
+
+            {/* Credentials */}
+            <div
+              className="mt-12 flex flex-wrap items-center gap-x-4 gap-y-2 pt-8 text-xs font-semibold uppercase tracking-[0.18em]"
+              style={{ borderTop: "1px solid rgba(26,26,34,0.1)", color: "rgba(26,26,34,0.5)" }}
+            >
+              {credentials.map((c, i) => (
+                <span key={c} className="flex items-center gap-x-4">
+                  {i > 0 && <span style={{ color: "rgba(26,26,34,0.2)" }}>·</span>}
+                  <span>{c}</span>
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
