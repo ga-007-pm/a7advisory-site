@@ -35,7 +35,7 @@ export function Metrics() {
               </div>
               <p
                 className="mt-5 text-[15px] leading-[1.6] max-w-[16rem]"
-                style={{ color: "#374151" }}
+                style={{ color: "#6B7280" }}
               >
                 {m.label}
               </p>

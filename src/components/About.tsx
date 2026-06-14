@@ -38,8 +38,8 @@ export function About() {
           </p>
           <h2
             id="about-heading"
-            className="text-4xl sm:text-5xl font-bold tracking-tight"
-            style={{ color: "#1A1A22" }}
+            className="text-3xl sm:text-4xl font-semibold tracking-tight"
+            style={{ color: "#0F0F14" }}
           >
             {t("heading")}
           </h2>
@@ -55,8 +55,7 @@ export function About() {
             &ldquo;
           </span>
           <p
-            className="text-xl md:text-2xl font-bold italic leading-[1.35]"
-            style={{ color: "#374151" }}
+            className="pull-quote md:text-2xl"
           >
             {t.rich("quote", {
               grad: (chunks: ReactNode) => (
@@ -98,7 +97,7 @@ export function About() {
                   <div
                     key={p.title}
                     className="group relative pl-8"
-                    style={{ borderLeft: "2px solid rgba(26,26,34,0.1)" }}
+                    style={{ borderLeft: "2px solid rgba(15,15,20,0.1)" }}
                   >
                     <div
                       aria-hidden="true"
@@ -115,13 +114,13 @@ export function About() {
                     </span>
                     <h3
                       className="mb-3 text-xl font-bold"
-                      style={{ color: "#1A1A22" }}
+                      style={{ color: "#0F0F14" }}
                     >
                       {p.title}
                     </h3>
                     <p
                       className="text-[15px] leading-relaxed"
-                      style={{ color: "rgba(26,26,34,0.7)" }}
+                      style={{ color: "#6B7280" }}
                     >
                       {p.body}
                     </p>
@@ -133,7 +132,7 @@ export function About() {
             {/* Credentials */}
             <div
               className="mt-12 flex flex-wrap items-center gap-x-4 gap-y-2 pt-8 text-xs font-semibold uppercase tracking-[0.18em]"
-              style={{ borderTop: "1px solid rgba(26,26,34,0.1)", color: "rgba(26,26,34,0.5)" }}
+              style={{ borderTop: "1px solid rgba(15,15,20,0.1)", color: "rgba(15,15,20,0.45)" }}
             >
               {credentials.map((c, i) => (
                 <span key={c} className="flex items-center gap-x-4">

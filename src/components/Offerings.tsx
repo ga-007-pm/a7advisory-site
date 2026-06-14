@@ -92,7 +92,7 @@ export function Offerings() {
                   }}
                 >
                   <span
-                    className="text-[11px] font-semibold tabular-nums mt-0.5 shrink-0"
+                    className="text-[14px] font-semibold tabular-nums mt-0.5 shrink-0"
                     style={{ color: "#6E7294" }}
                   >
                     {item.num}
@@ -117,7 +117,7 @@ export function Offerings() {
           </nav>
 
           {/* ── RIGHT CONTENT ── */}
-          <div style={{ paddingLeft: "56px" }} className="flex flex-col">
+          <div style={{ paddingLeft: "56px", minHeight: "500px" }} className="flex flex-col">
 
             <AnimatePresence mode="wait">
               <motion.div
@@ -126,7 +126,7 @@ export function Offerings() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -4 }}
                 transition={{ duration: 0.22, ease: "easeOut" }}
-                style={{ minHeight: "280px" }}
+                style={{ flex: 1 }}
               >
                 {(() => {
                   const item = items[active]
@@ -208,7 +208,7 @@ export function Offerings() {
             </AnimatePresence>
 
             {/* CTA — outside AnimatePresence, never re-renders on panel switch */}
-            <div className="mt-5">
+            <div className="mt-auto pt-8">
               <Button variant="primary" href={CALENDLY_URL} innerBg="#1A1A22">
                 {t("cta")}
               </Button>

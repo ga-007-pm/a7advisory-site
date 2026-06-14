@@ -74,6 +74,19 @@
   }
 }
 
+/* ─── Typographic roles ──────────────────────────────────────────────────── */
+/* Named by purpose, not appearance. Color is intentionally warmer than       */
+/* --color-ink — pull quotes carry emotional weight, not structural weight.   */
+@layer components {
+  .pull-quote {
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.35;
+    color: #374151;
+  }
+}
+
 /* ─── Metrics hover swipe ────────────────────────────────────────────────── */
 /* Number sits solid ink; on hover a gradient swipes across left→right. */
 @layer components {
