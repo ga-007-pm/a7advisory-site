@@ -46,17 +46,17 @@ export function About() {
         </div>
 
         {/* Full-width pull quote */}
-        <blockquote className="relative mt-16 pt-10">
+        <blockquote className="flex items-center gap-4 mt-16">
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute -left-1 top-0 font-serif leading-none text-[6rem] sm:text-[8rem]"
-            style={{ color: "rgba(59, 31, 140, 0.22)" }}
+            className="font-serif leading-none flex-shrink-0 select-none text-[4rem] md:text-[5rem]"
+            style={{ color: "#3B1F8C", lineHeight: 1 }}
           >
             &ldquo;
           </span>
           <p
-            className="relative max-w-4xl text-2xl md:text-[28px] font-bold italic leading-[1.35]"
-            style={{ color: "#1A1A22" }}
+            className="text-xl md:text-2xl font-bold italic leading-[1.35]"
+            style={{ color: "#374151" }}
           >
             {t.rich("quote", {
               grad: (chunks: ReactNode) => (
