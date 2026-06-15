@@ -2,16 +2,22 @@
 
 import { motion, useReducedMotion } from "framer-motion"
 import { useTranslations } from "next-intl"
-import { FADE_UP, FADE_UP_SM } from "@/lib/motion"
+import type { Variants } from "framer-motion"
+import { FADE_UP } from "@/lib/motion"
 
 type Metric = {
   value: string
   label: string
 }
 
-const METRIC_STAGGER = {
+const METRICS_STAGGER = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.08 } },
+  show: { transition: { staggerChildren: 0.2 } },
+}
+
+const METRIC_CARD: Variants = {
+  hidden: { opacity: 0, y: 32 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }
 
 export function Metrics() {
@@ -41,7 +47,7 @@ export function Metrics() {
 
         <motion.div
           className="grid gap-8 md:grid-cols-3 md:gap-6"
-          variants={FADE_UP}
+          variants={METRICS_STAGGER}
           initial={reduced ? false : "hidden"}
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
@@ -49,25 +55,18 @@ export function Metrics() {
           {items.map((m) => (
             <motion.div
               key={m.label}
+              variants={METRIC_CARD}
               className="flex flex-col items-center text-center md:items-start md:text-left"
-              variants={METRIC_STAGGER}
-              initial={reduced ? false : "hidden"}
-              whileInView="show"
-              viewport={{ once: true, margin: "-80px" }}
             >
-              <motion.div
-                variants={FADE_UP}
-                className="metric-num text-[52px] sm:text-[64px] md:text-[80px] font-extrabold tracking-[-0.03em] leading-none"
-              >
+              <div className="metric-num text-[52px] sm:text-[64px] md:text-[80px] font-extrabold tracking-[-0.03em] leading-none">
                 {m.value}
-              </motion.div>
-              <motion.p
-                variants={FADE_UP_SM}
+              </div>
+              <p
                 className="mt-5 text-[15px] leading-[1.6] max-w-[16rem]"
                 style={{ color: "#6B7280" }}
               >
                 {m.label}
-              </motion.p>
+              </p>
             </motion.div>
           ))}
         </motion.div>

@@ -19,8 +19,8 @@ type OfferingItem = {
 const ACCENTS = ["#8c52ff", "#e08448", "#2FA38E", "#5B8BF5"] as const
 
 const TRIGGER_STAGGER = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.06, delayChildren: 0.18 } },
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.06, delayChildren: 0.18 } },
 }
 
 export function Offerings() {
@@ -103,7 +103,7 @@ export function Offerings() {
                     variants={TRIGGER_STAGGER}
                     initial={reduced ? false : "hidden"}
                     whileInView="show"
-                    viewport={{ once: true, margin: "-40px" }}
+                    viewport={{ once: true, amount: 0.3 }}
                   >
                     {item.triggers.map((trigger, j) => (
                       <motion.li key={j} variants={FADE_UP_SM} className="flex items-start gap-2.5 text-[13px] leading-[1.5]" style={{ color: "#F0EDFF", opacity: 0.75 }}>
@@ -208,7 +208,8 @@ export function Offerings() {
                         className="flex flex-col gap-2.5"
                         variants={reduced ? undefined : TRIGGER_STAGGER}
                         initial={reduced ? false : "hidden"}
-                        animate={reduced ? false : "show"}
+                        whileInView={reduced ? undefined : "show"}
+                        viewport={{ once: false, amount: 0.3 }}
                       >
                         {item.triggers.map((trigger, j) => (
                           <motion.li
@@ -228,7 +229,7 @@ export function Offerings() {
               </motion.div>
             </AnimatePresence>
 
-            <div className="mt-auto pt-8">
+            <div className="mt-8">
               <Button variant="primary" onClick={openCalendly} innerBg="#1A1A22">
                 {t("cta")}
               </Button>
