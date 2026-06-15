@@ -1,5 +1,5 @@
 export const WHATSAPP_URL = "https://wa.me/972533448446"
-export const CALENDLY_URL = "#" // placeholder — update when ready
+export const CALENDLY_URL = "https://calendly.com/gassedou/1-1-with-guy"
 export const SITE_URL = "https://a7advisory.ai"
 export const LINKEDIN_URL = "https://www.linkedin.com/in/guyassedou"
 export const EMAIL = "mailto:guy.assedou@gmail.com"

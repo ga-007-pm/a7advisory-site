@@ -12,7 +12,7 @@ type AboutPoint = {
 }
 
 const GRAD = "linear-gradient(90deg, #8c52ff 0%, #a86bff 48%, #e08448 100%)"
-const KICKER_COLORS = ["#8c52ff", "#e08448", "#2FA38E", "#1B3F8C"]
+const KICKER_COLORS = ["#8c52ff", "#e08448", "#2FA38E", "#5B8BF5"]
 
 export function About() {
   const t = useTranslations("about")
@@ -117,13 +117,18 @@ export function About() {
             </motion.div>
 
             {/* Credentials */}
-            <div className="mt-12 flex flex-wrap items-center gap-x-4 gap-y-2 pt-8 text-xs font-semibold uppercase tracking-[0.18em]" style={{ borderTop: "1px solid rgba(255,255,255,0.08)", color: "rgba(240,237,255,0.4)" }}>
-              {credentials.map((c, i) => (
-                <span key={c} className="flex items-center gap-x-4">
-                  {i > 0 && <span style={{ color: "rgba(240,237,255,0.2)" }}>·</span>}
-                  <span>{c}</span>
-                </span>
-              ))}
+            <div className="mt-12 pt-8 flex flex-col gap-y-2" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+              {credentials.map((c) => {
+                const match = c.match(/^(.+?)\s*\((.+?)\)$/)
+                const label = match ? match[1] : c
+                const desc = match ? match[2] : null
+                return (
+                  <div key={c} className="flex items-baseline gap-3">
+                    <span className="text-xs font-semibold uppercase tracking-[0.18em]" style={{ color: "rgba(240,237,255,0.7)" }}>{label}</span>
+                    {desc && <span className="text-[11px]" style={{ color: "rgba(240,237,255,0.35)" }}>{desc}</span>}
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
