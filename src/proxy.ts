@@ -12,7 +12,10 @@ export function proxy(request: NextRequest) {
   if (pathname === "/he" || pathname.startsWith("/he/")) {
     const url = request.nextUrl.clone()
     url.pathname = pathname === "/he" ? "/" : pathname.slice(3) || "/"
-    return NextResponse.redirect(url, 307)
+    const response = NextResponse.redirect(url, 307)
+    // Pin locale to English so next-intl doesn't re-detect Hebrew and loop
+    response.cookies.set("NEXT_LOCALE", "en", { path: "/", sameSite: "lax" })
+    return response
   }
 
   return intlMiddleware(request)
