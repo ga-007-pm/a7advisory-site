@@ -6,7 +6,7 @@ const intlMiddleware = createMiddleware(routing)
 
 // Hebrew translation is not ready yet — redirect /he/* to English.
 // Remove the /he block when Hebrew is ready to launch.
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   if (pathname === "/he" || pathname.startsWith("/he/")) {
