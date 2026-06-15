@@ -5,6 +5,7 @@ export function JsonLd() {
     name: "Guy Assedou",
     jobTitle: "Fractional CPO & Strategic Product Advisor",
     url: "https://a7advisory.ai",
+    image: "https://a7advisory.ai/headshot-circle.png",
     sameAs: ["https://www.linkedin.com/in/guyassedou"],
     knowsAbout: [
       "Product Strategy",
@@ -55,7 +56,7 @@ export function JsonLd() {
         name: "How is this different from hiring a full-time CPO?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "You get senior product leadership — strategy, execution, and team development — without the six-month search, 12-month ramp, equity dilution, or full-time cost. Engagements are scoped to what you actually need, and can scale up or down as the business evolves.",
+          text: "You get senior product leadership — strategy, execution, and team development — without the six-month search, 12-month ramp, equity dilution, or full-time cost. Engagements are scoped to what you actually need, and can scale up or down as the business evolves. Not sure which model fits? The 30-minute call usually makes it clear.",
         },
       },
       {
@@ -63,23 +64,31 @@ export function JsonLd() {
         name: "What does a typical engagement look like?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "It depends on the engagement. A focused workshop can be a single day. Advisory retainers run month-to-month. Owning a single initiative runs two to four months. Embedded fractional CPO work runs three to six months with a weekly operating cadence.",
+          text: "It depends on the engagement — and that range is intentional. A focused workshop can be a single day. Advisory retainers run month-to-month with regular weekly touchpoints. Owning a single initiative runs two to four months. Embedded fractional CPO work runs three to six months with a weekly operating cadence. If you're unsure which model fits, it usually becomes very clear during the first call.",
         },
       },
       {
         "@type": "Question",
-        name: "What's the minimum engagement length?",
+        name: "How do you manage working with multiple clients at once?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Fractional CPO work runs a minimum of three months. Advisory retainers run month-to-month. Coaching and workshops can be as short as a single session.",
+          text: "Each engagement runs on a defined operating cadence — dedicated weekly time, not reactive availability. The structure is intentional: it forces prioritization and keeps the work high-leverage. I carry a small number of active engagements at any one time, so you get consistent, focused attention — not a fractional slice of someone stretched thin.",
         },
       },
       {
         "@type": "Question",
-        name: "How quickly can we get started?",
+        name: "How do you approach AI in product strategy?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Typically within 1–2 weeks. The first step is a 30-minute call to understand the situation and see if it's a good fit.",
+          text: "AI isn't a feature layer — it's a rethinking of what the product does and how the team operates. I help founders separate real leverage from noise: which bets to make, how to sequence them, and how to build the AI-native workflows that actually compound. I've led this work across B2B SaaS at multiple stages.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How is this different from a fractional CPO marketplace or advisory network?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most fractional models give you access to a pool — you get matched, you get hours, you get advice. I work differently. I carry a small number of engagements at any one time, embedded in your team, and invested in your success. The difference shows up in execution: I'm not an outsider, I'm in the room where the decisions get made. I operate the way I build products — focused on outcomes.",
         },
       },
     ],
