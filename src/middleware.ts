@@ -1,7 +1,11 @@
 import { NextRequest, NextResponse } from "next/server"
+import createMiddleware from "next-intl/middleware"
+import { routing } from "./i18n/routing"
+
+const intlMiddleware = createMiddleware(routing)
 
 // Hebrew translation is not ready yet — redirect /he/* to English.
-// Remove this file (or the redirect block) when Hebrew is ready to launch.
+// Remove the /he block when Hebrew is ready to launch.
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
@@ -10,8 +14,10 @@ export function middleware(request: NextRequest) {
     url.pathname = pathname === "/he" ? "/" : pathname.slice(3) || "/"
     return NextResponse.redirect(url, 307)
   }
+
+  return intlMiddleware(request)
 }
 
 export const config = {
-  matcher: ["/he", "/he/:path*"],
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 }
