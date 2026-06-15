@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useTranslations } from "next-intl"
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion"
+import { m, AnimatePresence, useReducedMotion } from "framer-motion"
 import { Button } from "./Button"
 import { openCalendly } from "@/lib/calendly"
 import { STAGGER, FADE_UP, FADE_UP_SM, SLIDE_LEFT_SM } from "@/lib/motion"
@@ -39,7 +39,7 @@ export function Offerings() {
       <div className="section-inner section-py">
 
         {/* Section header */}
-        <motion.div
+        <m.div
           className="mb-10 md:mb-14 text-center"
           variants={FADE_UP}
           initial={reduced ? false : "hidden"}
@@ -56,10 +56,10 @@ export function Offerings() {
           >
             {t("heading")}
           </h2>
-        </motion.div>
+        </m.div>
 
         {/* ── MOBILE: stacked cards ── */}
-        <motion.div
+        <m.div
           className="flex flex-col gap-4 md:hidden"
           variants={STAGGER}
           initial={reduced ? false : "hidden"}
@@ -69,7 +69,7 @@ export function Offerings() {
           {items.map((item, i) => {
             const accent = ACCENTS[i]
             return (
-              <motion.div
+              <m.div
                 key={item.num}
                 variants={FADE_UP}
                 className="rounded-[6px] overflow-hidden"
@@ -98,7 +98,7 @@ export function Offerings() {
                   <p className="text-[10px] font-semibold tracking-[0.10em] uppercase mb-3" style={{ color: "#6E7294" }}>
                     {t("trigger_label")}
                   </p>
-                  <motion.ul
+                  <m.ul
                     className="flex flex-col gap-2"
                     variants={TRIGGER_STAGGER}
                     initial={reduced ? false : "hidden"}
@@ -106,14 +106,14 @@ export function Offerings() {
                     viewport={{ once: true, amount: 0.3 }}
                   >
                     {item.triggers.map((trigger, j) => (
-                      <motion.li key={j} variants={FADE_UP_SM} className="flex items-start gap-2.5 text-[13px] leading-[1.5]" style={{ color: "#F0EDFF", opacity: 0.75 }}>
+                      <m.li key={j} variants={FADE_UP_SM} className="flex items-start gap-2.5 text-[13px] leading-[1.5]" style={{ color: "#F0EDFF", opacity: 0.75 }}>
                         <span className="rounded-full shrink-0 mt-[6px]" style={{ width: "5px", height: "5px", backgroundColor: accent, display: "inline-block" }} />
                         {trigger}
-                      </motion.li>
+                      </m.li>
                     ))}
-                  </motion.ul>
+                  </m.ul>
                 </div>
-              </motion.div>
+              </m.div>
             )
           })}
 
@@ -122,13 +122,13 @@ export function Offerings() {
               {t("cta")}
             </Button>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* ── DESKTOP: sticky split panel ── */}
         <div className="hidden md:grid" style={{ gridTemplateColumns: "280px 1fr" }}>
 
           {/* LEFT NAV */}
-          <motion.nav
+          <m.nav
             style={{ borderRight: "1px solid rgba(255,255,255,0.08)", paddingRight: "40px" }}
             className="flex flex-col gap-1"
             variants={STAGGER}
@@ -142,7 +142,7 @@ export function Offerings() {
               const accent = ACCENTS[i]
 
               return (
-                <motion.button
+                <m.button
                   key={item.num}
                   variants={SLIDE_LEFT_SM}
                   type="button"
@@ -168,15 +168,15 @@ export function Offerings() {
                       {item.title}
                     </span>
                   </span>
-                </motion.button>
+                </m.button>
               )
             })}
-          </motion.nav>
+          </m.nav>
 
           {/* RIGHT CONTENT */}
           <div style={{ paddingLeft: "56px", minHeight: "500px" }} className="flex flex-col">
             <AnimatePresence mode="wait">
-              <motion.div
+              <m.div
                 key={active}
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -204,7 +204,7 @@ export function Offerings() {
                       <p className="text-[11px] font-semibold tracking-[0.10em] uppercase mb-3" style={{ color: "#6E7294" }}>
                         {t("trigger_label")}
                       </p>
-                      <motion.ul
+                      <m.ul
                         className="flex flex-col gap-2.5"
                         variants={reduced ? undefined : TRIGGER_STAGGER}
                         initial={reduced ? false : "hidden"}
@@ -212,7 +212,7 @@ export function Offerings() {
                         viewport={{ once: false, amount: 0.3 }}
                       >
                         {item.triggers.map((trigger, j) => (
-                          <motion.li
+                          <m.li
                             key={j}
                             variants={reduced ? undefined : FADE_UP_SM}
                             className="flex items-start gap-2.5 text-[14px] leading-[1.5]"
@@ -220,13 +220,13 @@ export function Offerings() {
                           >
                             <span className="rounded-full shrink-0 mt-[7px]" style={{ width: "5px", height: "5px", backgroundColor: accent, display: "inline-block" }} />
                             {trigger}
-                          </motion.li>
+                          </m.li>
                         ))}
-                      </motion.ul>
+                      </m.ul>
                     </>
                   )
                 })()}
-              </motion.div>
+              </m.div>
             </AnimatePresence>
 
             <div className="mt-8">

@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useReducedMotion } from "framer-motion"
+import { m, useReducedMotion } from "framer-motion"
 import { useTranslations } from "next-intl"
 import type { ReactNode } from "react"
 import { STAGGER, FADE_UP, FADE_IN, SLIDE_LEFT } from "@/lib/motion"
@@ -30,7 +30,7 @@ export function About() {
       <div className="section-inner section-py">
 
         {/* Header */}
-        <motion.div
+        <m.div
           className="max-w-3xl"
           variants={FADE_UP}
           initial={reduced ? false : "hidden"}
@@ -43,10 +43,10 @@ export function About() {
           <h2 id="about-heading" className="text-3xl sm:text-4xl font-semibold tracking-tight" style={{ color: "#F0EDFF" }}>
             {t("heading")}
           </h2>
-        </motion.div>
+        </m.div>
 
         {/* Pull quote */}
-        <motion.blockquote
+        <m.blockquote
           className="flex items-center gap-4 mt-10 md:mt-16"
           variants={FADE_IN}
           initial={reduced ? false : "hidden"}
@@ -65,13 +65,13 @@ export function About() {
               ),
             })}
           </p>
-        </motion.blockquote>
+        </m.blockquote>
 
         {/* Two-column */}
         <div className="mt-12 md:mt-20 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
 
           {/* Portrait */}
-          <motion.div
+          <m.div
             className="lg:col-span-5"
             variants={SLIDE_LEFT}
             initial={reduced ? false : "hidden"}
@@ -81,11 +81,11 @@ export function About() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[rgba(255,255,255,0.06)]">
               <img src="/headshot.jpg" alt={t("headshot_alt")} className="h-full w-full object-cover object-top" />
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Points */}
           <div className="lg:col-span-7 lg:pt-8">
-            <motion.div
+            <m.div
               className="space-y-10"
               variants={STAGGER}
               initial={reduced ? false : "hidden"}
@@ -95,7 +95,7 @@ export function About() {
               {points.map((p, i) => {
                 const accent = KICKER_COLORS[i % KICKER_COLORS.length]
                 return (
-                  <motion.div
+                  <m.div
                     key={p.title}
                     variants={FADE_UP}
                     className="group relative pl-8"
@@ -111,10 +111,10 @@ export function About() {
                     <p className="text-[15px] leading-relaxed" style={{ color: "#6E7294" }}>
                       {p.body}
                     </p>
-                  </motion.div>
+                  </m.div>
                 )
               })}
-            </motion.div>
+            </m.div>
 
             {/* Credentials */}
             <div className="mt-12 pt-8 flex flex-col gap-y-2" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>

@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useReducedMotion } from "framer-motion"
+import { m, useReducedMotion } from "framer-motion"
 import { useTranslations } from "next-intl"
 import { Button } from "./Button"
 import { WHATSAPP_URL } from "@/lib/constants"
@@ -18,7 +18,7 @@ export function CtaBanner() {
       style={{ backgroundColor: "#08080E" }}
     >
       <div className="section-inner section-py">
-        <motion.div
+        <m.div
           className="relative overflow-hidden px-6 py-10 sm:px-14 sm:py-20"
           style={{
             backgroundColor: "#1A1A22",
@@ -64,7 +64,7 @@ export function CtaBanner() {
               </Button>
             </div>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )

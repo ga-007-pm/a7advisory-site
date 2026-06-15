@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import {
-  motion,
+  m,
   useMotionTemplate,
   useMotionValue,
   useReducedMotion,
@@ -100,28 +100,28 @@ export function Hero() {
 
       {/* Purple glow — top-left. DO NOT TOUCH. */}
       <div aria-hidden style={{ position: "absolute", top: "-140px", left: "-100px", width: "640px", height: "540px", pointerEvents: "none" }}>
-        <motion.div style={{ width: "100%", height: "100%", x: purpleX, y: purpleY }}>
+        <m.div style={{ width: "100%", height: "100%", x: purpleX, y: purpleY }}>
           <div className="glow-drift-a" style={{ width: "100%", height: "100%", background: "radial-gradient(ellipse at center, rgba(140,82,255,0.26) 0%, transparent 65%)" }} />
-        </motion.div>
+        </m.div>
       </div>
 
       {/* Amber glow — bottom-right. DO NOT TOUCH. */}
       <div aria-hidden style={{ position: "absolute", bottom: "-120px", right: "-80px", width: "520px", height: "420px", pointerEvents: "none" }}>
-        <motion.div style={{ width: "100%", height: "100%", x: amberX, y: amberY }}>
+        <m.div style={{ width: "100%", height: "100%", x: amberX, y: amberY }}>
           <div className="glow-drift-b" style={{ width: "100%", height: "100%", background: "radial-gradient(ellipse at center, rgba(255,145,77,0.15) 0%, transparent 65%)" }} />
-        </motion.div>
+        </m.div>
       </div>
 
       {/* Cursor echo */}
-      <motion.div aria-hidden style={{ position: "absolute", top: 0, left: 0, width: "280px", height: "280px", marginTop: "-140px", marginLeft: "-140px", x: echoX, y: echoY, opacity: echoOpacity, background: trailBackground, pointerEvents: "none" }} />
+      <m.div aria-hidden style={{ position: "absolute", top: 0, left: 0, width: "280px", height: "280px", marginTop: "-140px", marginLeft: "-140px", x: echoX, y: echoY, opacity: echoOpacity, background: trailBackground, pointerEvents: "none" }} />
 
       {/* Cursor trail */}
-      <motion.div aria-hidden style={{ position: "absolute", top: 0, left: 0, width: "140px", height: "140px", marginTop: "-70px", marginLeft: "-70px", x: trailX, y: trailY, opacity: trailOpacitySpring, background: trailBackground, pointerEvents: "none" }} />
+      <m.div aria-hidden style={{ position: "absolute", top: 0, left: 0, width: "140px", height: "140px", marginTop: "-70px", marginLeft: "-70px", x: trailX, y: trailY, opacity: trailOpacitySpring, background: trailBackground, pointerEvents: "none" }} />
 
       {/* Content */}
       <div className="section-inner relative z-10 pt-36 md:pt-[152px] pb-24">
 
-        <motion.p
+        <m.p
           className="relative mb-6 text-[12px] font-semibold uppercase tracking-[0.14em]"
           style={{ color: "#6E7294" }}
           variants={FADE_UP}
@@ -129,9 +129,9 @@ export function Hero() {
           animate="show"
         >
           {t("eyebrow")}
-        </motion.p>
+        </m.p>
 
-        <motion.h1
+        <m.h1
           className="relative mb-7 max-w-[720px] text-[40px] font-extrabold leading-none tracking-[-0.035em] md:text-[52px] lg:text-[62px]"
           style={{ color: "#F0EDFF" }}
           variants={FADE_UP}
@@ -141,9 +141,9 @@ export function Hero() {
         >
           Turn product into{" "}
           <span style={gradientText}>leverage.</span>
-        </motion.h1>
+        </m.h1>
 
-        <motion.div
+        <m.div
           className="relative mb-10 flex flex-wrap items-start"
           style={{ color: "#6E7294", fontSize: "17px", lineHeight: "1.65", gap: "0 0.3em", maxWidth: "580px" }}
           variants={FADE_UP}
@@ -155,9 +155,9 @@ export function Hero() {
           <RotatingSlot items={slot1} interval={3100} delay={1400} />
           <span>{t("sub_suffix")}</span>
           <RotatingSlot items={slot2} interval={2200} delay={3000} />
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           className="relative flex flex-wrap items-center gap-4"
           variants={FADE_UP}
           initial={reduced ? false : "hidden"}
@@ -170,7 +170,7 @@ export function Hero() {
           <Button variant="secondary" href="#offerings">
             {t("btn_secondary")}
           </Button>
-        </motion.div>
+        </m.div>
 
       </div>
     </section>

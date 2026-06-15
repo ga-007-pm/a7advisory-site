@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion"
+import { AnimatePresence, m, useReducedMotion } from "framer-motion"
 import { useTranslations } from "next-intl"
 import { STAGGER, FADE_UP_SM } from "@/lib/motion"
 
@@ -12,7 +12,7 @@ type FaqItem = {
 
 function ChevronIcon({ open }: { open: boolean }) {
   return (
-    <motion.svg
+    <m.svg
       width="18"
       height="18"
       viewBox="0 0 24 24"
@@ -27,7 +27,7 @@ function ChevronIcon({ open }: { open: boolean }) {
       style={{ flexShrink: 0 }}
     >
       <polyline points="6 9 12 15 18 9" />
-    </motion.svg>
+    </m.svg>
   )
 }
 
@@ -61,7 +61,7 @@ function FaqItem({ item }: { item: FaqItem }) {
 
       <AnimatePresence initial={false}>
         {open && (
-          <motion.div
+          <m.div
             key="answer"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
@@ -72,7 +72,7 @@ function FaqItem({ item }: { item: FaqItem }) {
             <p className="pb-6 text-[15px] leading-relaxed" style={{ color: "#4B5563" }}>
               {item.a}
             </p>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </div>
@@ -93,7 +93,7 @@ export function Faq() {
     >
       <div className="section-inner section-py">
 
-        <motion.div
+        <m.div
           className="max-w-3xl mx-auto mb-14 text-center"
           variants={FADE_UP_SM}
           initial={reduced ? false : "hidden"}
@@ -106,9 +106,9 @@ export function Faq() {
           <h2 id="faq-heading" className="text-3xl sm:text-4xl font-semibold tracking-tight" style={{ color: "#0F0F14" }}>
             {t("heading")}
           </h2>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           className="max-w-3xl mx-auto"
           style={{ borderTop: "1px solid rgba(15,15,20,0.1)" }}
           variants={STAGGER}
@@ -117,11 +117,11 @@ export function Faq() {
           viewport={{ once: true, margin: "-80px" }}
         >
           {items.map((item, i) => (
-            <motion.div key={i} variants={FADE_UP_SM}>
+            <m.div key={i} variants={FADE_UP_SM}>
               <FaqItem item={item} />
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
 
       </div>
     </section>

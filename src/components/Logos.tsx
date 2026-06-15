@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useReducedMotion } from "framer-motion"
+import { m, useReducedMotion } from "framer-motion"
 
 // Heights tuned individually — PNG files have different internal whitespace
 const LOGOS = [
@@ -23,7 +23,7 @@ export function Logos() {
       style={{ backgroundColor: "#F4F3FA", borderColor: "#E2E0EF" }}
     >
       <div className="section-inner section-py-sm">
-        <motion.div
+        <m.div
           className="grid grid-cols-2 sm:grid-cols-3 place-items-center gap-y-8"
           initial={reduced ? false : { opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -40,7 +40,7 @@ export function Logos() {
               onError={(e) => { e.currentTarget.style.display = "none" }}
             />
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )
