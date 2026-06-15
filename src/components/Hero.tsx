@@ -12,7 +12,7 @@ import {
 import { useTranslations } from "next-intl"
 import { Button } from "./Button"
 import { RotatingSlot } from "./RotatingSlot"
-import { CALENDLY_URL } from "@/lib/constants"
+import { openCalendly } from "@/lib/calendly"
 import { FADE_UP } from "@/lib/motion"
 
 export function Hero() {
@@ -154,7 +154,7 @@ export function Hero() {
           <span>{t("sub_prefix")}</span>
           <RotatingSlot items={slot1} interval={3100} delay={1400} />
           <span>{t("sub_suffix")}</span>
-          <RotatingSlot items={slot2} interval={2200} delay={500} />
+          <RotatingSlot items={slot2} interval={2200} delay={3000} />
         </motion.div>
 
         <motion.div
@@ -164,7 +164,7 @@ export function Hero() {
           animate="show"
           transition={{ duration: 0.3, ease: "easeOut", delay: reduced ? 0 : 0.2 }}
         >
-          <Button variant="primary" href={CALENDLY_URL}>
+          <Button variant="primary" onClick={openCalendly}>
             {t("btn_primary")}
           </Button>
           <Button variant="secondary" href="#offerings">

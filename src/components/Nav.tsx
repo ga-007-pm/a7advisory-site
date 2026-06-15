@@ -5,7 +5,7 @@ import { Link } from "@/i18n/routing"
 import { Logo } from "./Logo"
 import { Button } from "./Button"
 import { WhatsAppButton } from "./WhatsAppButton"
-import { CALENDLY_URL } from "@/lib/constants"
+import { openCalendly } from "@/lib/calendly"
 
 const NAV_LINKS = [
   { label: "Services", href: "#offerings" },
@@ -47,7 +47,7 @@ export function Nav() {
 
         <div className="flex items-center gap-3">
           <WhatsAppButton label={t("whatsapp_label")} />
-          <Button variant="primary" href={CALENDLY_URL}>
+          <Button variant="primary" onClick={openCalendly}>
             {t("cta")}
           </Button>
         </div>

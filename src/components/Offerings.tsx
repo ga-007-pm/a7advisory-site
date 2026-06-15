@@ -4,8 +4,8 @@ import { useState } from "react"
 import { useTranslations } from "next-intl"
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion"
 import { Button } from "./Button"
-import { CALENDLY_URL } from "@/lib/constants"
-import { STAGGER, FADE_UP, SLIDE_LEFT_SM } from "@/lib/motion"
+import { openCalendly } from "@/lib/calendly"
+import { STAGGER, FADE_UP, FADE_UP_SM, SLIDE_LEFT_SM } from "@/lib/motion"
 
 type OfferingItem = {
   num: string
@@ -16,7 +16,12 @@ type OfferingItem = {
   triggers: string[]
 }
 
-const ACCENTS = ["#8c52ff", "#e08448", "#2FA38E", "#1B3F8C"] as const
+const ACCENTS = ["#8c52ff", "#e08448", "#2FA38E", "#5B8BF5"] as const
+
+const TRIGGER_STAGGER = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.06, delayChildren: 0.18 } },
+}
 
 export function Offerings() {
   const t = useTranslations("offerings")
@@ -93,21 +98,27 @@ export function Offerings() {
                   <p className="text-[10px] font-semibold tracking-[0.10em] uppercase mb-3" style={{ color: "#6E7294" }}>
                     {t("trigger_label")}
                   </p>
-                  <ul className="flex flex-col gap-2">
+                  <motion.ul
+                    className="flex flex-col gap-2"
+                    variants={TRIGGER_STAGGER}
+                    initial={reduced ? false : "hidden"}
+                    whileInView="show"
+                    viewport={{ once: true, margin: "-40px" }}
+                  >
                     {item.triggers.map((trigger, j) => (
-                      <li key={j} className="flex items-start gap-2.5 text-[13px] leading-[1.5]" style={{ color: "#F0EDFF", opacity: 0.75 }}>
+                      <motion.li key={j} variants={FADE_UP_SM} className="flex items-start gap-2.5 text-[13px] leading-[1.5]" style={{ color: "#F0EDFF", opacity: 0.75 }}>
                         <span className="rounded-full shrink-0 mt-[6px]" style={{ width: "5px", height: "5px", backgroundColor: accent, display: "inline-block" }} />
                         {trigger}
-                      </li>
+                      </motion.li>
                     ))}
-                  </ul>
+                  </motion.ul>
                 </div>
               </motion.div>
             )
           })}
 
           <div className="pt-4">
-            <Button variant="primary" href={CALENDLY_URL} innerBg="#1A1A22">
+            <Button variant="primary" onClick={openCalendly} innerBg="#1A1A22">
               {t("cta")}
             </Button>
           </div>
@@ -193,14 +204,24 @@ export function Offerings() {
                       <p className="text-[11px] font-semibold tracking-[0.10em] uppercase mb-3" style={{ color: "#6E7294" }}>
                         {t("trigger_label")}
                       </p>
-                      <ul className="flex flex-col gap-2.5">
+                      <motion.ul
+                        className="flex flex-col gap-2.5"
+                        variants={reduced ? undefined : TRIGGER_STAGGER}
+                        initial={reduced ? false : "hidden"}
+                        animate={reduced ? false : "show"}
+                      >
                         {item.triggers.map((trigger, j) => (
-                          <li key={j} className="flex items-start gap-2.5 text-[14px] leading-[1.5]" style={{ color: "#F0EDFF", opacity: 0.75 }}>
+                          <motion.li
+                            key={j}
+                            variants={reduced ? undefined : FADE_UP_SM}
+                            className="flex items-start gap-2.5 text-[14px] leading-[1.5]"
+                            style={{ color: "#F0EDFF", opacity: 0.75 }}
+                          >
                             <span className="rounded-full shrink-0 mt-[7px]" style={{ width: "5px", height: "5px", backgroundColor: accent, display: "inline-block" }} />
                             {trigger}
-                          </li>
+                          </motion.li>
                         ))}
-                      </ul>
+                      </motion.ul>
                     </>
                   )
                 })()}
@@ -208,7 +229,7 @@ export function Offerings() {
             </AnimatePresence>
 
             <div className="mt-auto pt-8">
-              <Button variant="primary" href={CALENDLY_URL} innerBg="#1A1A22">
+              <Button variant="primary" onClick={openCalendly} innerBg="#1A1A22">
                 {t("cta")}
               </Button>
             </div>

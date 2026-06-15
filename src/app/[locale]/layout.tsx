@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { setRequestLocale, getMessages } from "next-intl/server"
 import { NextIntlClientProvider } from "next-intl"
+import Script from "next/script"
 import { routing } from "@/i18n/routing"
 import { Providers } from "./providers"
 import { Nav } from "@/components/Nav"
@@ -71,6 +72,7 @@ export default async function LocaleLayout({
     <html lang={locale} dir={dir} className={inter.variable}>
       <head>
         <JsonLd />
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
       </head>
       <body>
         <a
@@ -86,6 +88,7 @@ export default async function LocaleLayout({
             <WhatsAppFab />
           </Providers>
         </NextIntlClientProvider>
+        <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />
       </body>
     </html>
   )

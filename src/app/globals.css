@@ -148,6 +148,11 @@
   .glow-drift-a, .glow-drift-b { animation: none; }
 }
 
+/* ─── Calendly popup overrides ───────────────────────────────────────────── */
+.calendly-overlay {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
 body {
   background-color: #08080E;
   color: #F0EDFF;

@@ -3,7 +3,8 @@
 import { motion, useReducedMotion } from "framer-motion"
 import { useTranslations } from "next-intl"
 import { Button } from "./Button"
-import { CALENDLY_URL, WHATSAPP_URL } from "@/lib/constants"
+import { WHATSAPP_URL } from "@/lib/constants"
+import { openCalendly } from "@/lib/calendly"
 import { SCALE_IN } from "@/lib/motion"
 
 export function CtaBanner() {
@@ -55,7 +56,7 @@ export function CtaBanner() {
               {t("body")}
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              <Button variant="primary" href={CALENDLY_URL} innerBg="#1A1A22">
+              <Button variant="primary" onClick={openCalendly} innerBg="#1A1A22">
                 {t("btn")}
               </Button>
               <Button variant="secondary" href={WHATSAPP_URL}>
