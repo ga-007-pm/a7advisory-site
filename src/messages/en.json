@@ -28,7 +28,7 @@
         "tag": "Lead",
         "title": "Fractional CPO",
         "subtitle": "Full ownership of the product function — strategy through execution.",
-        "body": "Scaled to your inflection point: own strategy, align go-to-market, and drive execution — embedded in your team, operating on your cadence, without the cost or ramp of a full-time hire.",
+        "body": "Own strategy, align go-to-market, and drive execution — embedded in your team without the cost or ramp of a full-time hire.",
         "triggers": [
           "AI-native product or capabilities on the table — and no senior owner to drive it",
           "Founder-led product — ready to hand it to a seasoned operator",
@@ -40,7 +40,7 @@
         "tag": "Guide",
         "title": "Strategic Advisor",
         "subtitle": "Your team owns the build — I pressure-test direction and sharpen decisions.",
-        "body": "Some bets are too expensive to get wrong. I sharpen product direction, pressure-test the decisions that matter most, and reorient the team around outcomes over output — high-leverage counsel, on your pace, when the stakes are highest.",
+        "body": "Some bets are too expensive to get wrong. I sharpen direction, pressure-test key decisions, and reorient around outcomes over output — high-leverage counsel, when the stakes are highest.",
         "triggers": [
           "You're shipping — but it's not showing up in retention or revenue",
           "A high-stakes bet on the table: raise, new market, or strategic pivot",
@@ -52,7 +52,7 @@
         "tag": "Execute",
         "title": "Executive Operator",
         "subtitle": "One strategic initiative — I own it from concept to launch.",
-        "body": "What slows launches is rarely the building — it's the unmade decisions: scope, sequencing, positioning, what good looks like. I take ownership of a single bet — an AI-native product, a new product line — making the strategic calls in real time and driving design, build, and iteration to launch.",
+        "body": "What slows launches is rarely the building — it's the ability to rapidly synthesize direction and make good decisions, quickly. I own a single strategic bet end-to-end — working with your team in real time and driving design, build, and iteration to launch.",
         "triggers": [
           "A strategic initiative on the table — and no senior owner to drive it",
           "Delivery keeps stalling on decisions only a product executive can make",
@@ -64,7 +64,7 @@
         "tag": "Elevate",
         "title": "Craft Coach",
         "subtitle": "Raise the craft and skills of the leaders and teams already doing the work.",
-        "body": "Your people have the raw material — what compresses the learning curve is working with someone who's done it. Structured 1:1 coaching for your product leader, hands-on team workshops, and AI-native ways of working — building both the leadership and the craft your next stage demands.",
+        "body": "Working with someone who's done it compresses the curve. 1:1 coaching, hands-on workshops, and AI-native ways of working — leveling up leadership and craft for what's coming next.",
         "triggers": [
           "Your product leader is two steps from ready — and you need them ready now",
           "You're betting on AI-native workflows — and no one owns the transition",
@@ -98,7 +98,7 @@
       {
         "kicker": "Seasoned",
         "title": "The inflection point is the job",
-        "body": "The most valuable company moments happen at transition — when the foundation exists but the path forward isn't clear. The work is knowing where to focus and how to make every bet move the metrics that matter."
+        "body": "The most valuable moments happen at transition — when the foundation exists but the path forward isn't clear. Knowing where to focus and making every bet move the metrics that matter — that's where I step in."
       },
       {
         "kicker": "T-shaped",
@@ -108,12 +108,12 @@
       {
         "kicker": "Fluent",
         "title": "Expertise in the US & Israeli markets",
-        "body": "A decade embedded inside American SaaS, with deep roots in Israel's tech ecosystem — not advising from a distance, but building. GTM dynamics, investor framing, cultural context: I know these markets from the inside."
+        "body": "Spent a decade embedded in North American corporates and startups, with deep roots in Israel's tech ecosystem. I bring a first-hand view into user mindset, cultural context, and market dynamics."
       },
       {
         "kicker": "Ahead",
         "title": "Close to the craft",
-        "body": "At Monday.com, I led the launch of the industry's first portfolio-level reporting suite — AI-generated insights & leadership reports — during the company's push into enterprise at $1B ARR. At Cognota, as Fractional CPO, I introduced an AI-native working methodology that compressed execution cycles across discovery and prototyping. I mentor PMs and speak at ProductCon LA, ProductWorld, and Product-Led Summit."
+        "body": "I've built and delivered the industry's first AI-native experiences and workflows — at Monday.com during the push into enterprise at $1B ARR, and at Cognota across discovery and prototyping. I practice what I preach, refining it through my own AI-powered work and sharing it as a mentor and speaker at ProductCon LA, ProductWorld, and Product-Led Summit."
       }
     ],
     "credentials": "Kellogg MBA (strategy) · Technion BS EE (engineering) · IDF Major (leadership)",
