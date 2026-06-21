@@ -174,7 +174,7 @@ export function Offerings() {
           </m.nav>
 
           {/* RIGHT CONTENT */}
-          <div style={{ paddingLeft: "56px", minHeight: "500px" }} className="flex flex-col">
+          <div style={{ paddingLeft: "56px", minHeight: "400px" }} className="flex flex-col">
             <AnimatePresence mode="wait">
               <m.div
                 key={active}
