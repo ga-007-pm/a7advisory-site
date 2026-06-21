@@ -155,6 +155,7 @@ export function Hero() {
           <RotatingSlot items={slot1} interval={3100} delay={1400} />
           <span>{t("sub_suffix")}</span>
           <RotatingSlot items={slot2} interval={2200} delay={3000} />
+          <span className="basis-full">{t("sub_tail")}</span>
         </m.div>
 
         <m.div
